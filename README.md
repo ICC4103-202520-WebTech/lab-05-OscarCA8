@@ -19,7 +19,7 @@ Connect the database tables using proper associations and add basic validations.
 
 ## Deliverables
 - Models updated with associations and validations.
-- Seed file adjusted to create valid associated records.
+- Seed file adjusted to create valid associated records..
 
 
 
