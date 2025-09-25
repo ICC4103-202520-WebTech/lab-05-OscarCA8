@@ -2333,3 +2333,437 @@ Processing by RoomsController#index as HTML
 Completed 200 OK in 16ms (Views: 5.2ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
 
 
+  [1m[36mActiveRecord::SchemaMigration Load (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Hotellab3'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (3.8ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Hotellab3'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Hotellab3'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Hotellab3'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Hotellab3'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Hotellab3'*/[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[35mSET search_path TO public /*application='Hotellab3'*/[0m
+  [1m[35m (111.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "hotellab3_development" /*application='Hotellab3'*/[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[35mSET search_path TO public /*application='Hotellab3'*/[0m
+  [1m[35m (51.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "hotellab3_test" /*application='Hotellab3'*/[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[35mSET search_path TO public /*application='Hotellab3'*/[0m
+  [1m[35m (215.3ms)[0m  [1m[35mCREATE DATABASE "hotellab3_development" ENCODING = 'unicode' /*application='Hotellab3'*/[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[35mSET search_path TO public /*application='Hotellab3'*/[0m
+  [1m[35m (76.5ms)[0m  [1m[35mCREATE DATABASE "hotellab3_test" ENCODING = 'unicode' /*application='Hotellab3'*/[0m
+  [1m[35m (7.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY) /*application='Hotellab3'*/[0m
+  [1m[35m (5.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='Hotellab3'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Hotellab3'*/[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4107016793932581270) /*application='Hotellab3'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Hotellab3'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.5ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Hotellab3'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (3.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2025-09-25 18:21:04.364415', '2025-09-25 18:21:04.364418') RETURNING "key" /*application='Hotellab3'*/[0m
+Migrating to CreateRoomTable (20250904185412)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN /*application='Hotellab3'*/[0m
+  [1m[35m (5.8ms)[0m  [1m[35mCREATE TABLE "rooms" ("id" bigserial primary key, "number" character varying NOT NULL, "room_type" integer NOT NULL, "price" integer NOT NULL, "status" integer NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='Hotellab3'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250904185412') RETURNING "version" /*application='Hotellab3'*/[0m
+  [1m[36mTRANSACTION (4.7ms)[0m  [1m[35mCOMMIT /*application='Hotellab3'*/[0m
+Migrating to CreateGuestTable (20250904185446)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN /*application='Hotellab3'*/[0m
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE TABLE "guests" ("id" bigserial primary key, "first_name" character varying NOT NULL, "last_name" character varying NOT NULL, "email" character varying NOT NULL, "phone" character varying NOT NULL, "document_id" character varying NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='Hotellab3'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250904185446') RETURNING "version" /*application='Hotellab3'*/[0m
+  [1m[36mTRANSACTION (3.4ms)[0m  [1m[35mCOMMIT /*application='Hotellab3'*/[0m
+Migrating to CreateReservationTable (20250904185502)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN /*application='Hotellab3'*/[0m
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE TABLE "reservations" ("id" bigserial primary key, "code" character varying NOT NULL, "guest_id" integer NOT NULL, "room_id" integer NOT NULL, "check_in" date NOT NULL, "check_out" date NOT NULL, "status" integer NOT NULL, "adults" integer NOT NULL, "children" integer NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='Hotellab3'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250904185502') RETURNING "version" /*application='Hotellab3'*/[0m
+  [1m[36mTRANSACTION (3.4ms)[0m  [1m[35mCOMMIT /*application='Hotellab3'*/[0m
+Migrating to CreateServiceTable (20250904185513)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN /*application='Hotellab3'*/[0m
+  [1m[35m (4.8ms)[0m  [1m[35mCREATE TABLE "services" ("id" bigserial primary key, "name" character varying NOT NULL, "price" integer NOT NULL, "is_active" boolean NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='Hotellab3'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250904185513') RETURNING "version" /*application='Hotellab3'*/[0m
+  [1m[36mTRANSACTION (3.7ms)[0m  [1m[35mCOMMIT /*application='Hotellab3'*/[0m
+Migrating to CreateServiceUsageTable (20250904185529)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN /*application='Hotellab3'*/[0m
+  [1m[35m (5.3ms)[0m  [1m[35mCREATE TABLE "service_usages" ("id" bigserial primary key, "reservation_id" integer NOT NULL, "service_id" integer NOT NULL, "quantity" integer NOT NULL, "used_at" timestamp(6) NOT NULL, "note" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='Hotellab3'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250904185529') RETURNING "version" /*application='Hotellab3'*/[0m
+  [1m[36mTRANSACTION (4.6ms)[0m  [1m[35mCOMMIT /*application='Hotellab3'*/[0m
+Migrating to CreateInvoiceTable (20250904185552)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN /*application='Hotellab3'*/[0m
+  [1m[35m (4.4ms)[0m  [1m[35mCREATE TABLE "invoices" ("id" bigserial primary key, "reservation_id" integer NOT NULL, "nights_subtotal" integer NOT NULL, "services_subtotal" integer NOT NULL, "tax" integer NOT NULL, "total" integer NOT NULL, "issued_at" timestamp(6) NOT NULL, "status" character varying NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='Hotellab3'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250904185552') RETURNING "version" /*application='Hotellab3'*/[0m
+  [1m[36mTRANSACTION (3.2ms)[0m  [1m[35mCOMMIT /*application='Hotellab3'*/[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(4107016793932581270) /*application='Hotellab3'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Hotellab3'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Hotellab3'*/[0m
+  [1m[36mRoom Load (0.6ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."number" = '101' LIMIT 1 /*application='Hotellab3'*/[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN /*application='Hotellab3'*/[0m
+  [1m[36mRoom Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "rooms" WHERE "rooms"."number" = '101' LIMIT 1 /*application='Hotellab3'*/[0m
+  [1m[36mRoom Create (0.6ms)[0m  [1m[32mINSERT INTO "rooms" ("number", "room_type", "price", "status", "created_at", "updated_at") VALUES ('101', 0, 100, 0, '2025-09-25 18:21:10.258275', '2025-09-25 18:21:10.258275') RETURNING "id" /*application='Hotellab3'*/[0m
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[35mCOMMIT /*application='Hotellab3'*/[0m
+  [1m[36mGuest Load (0.4ms)[0m  [1m[34mSELECT "guests".* FROM "guests" WHERE "guests"."email" = 'oicarrasco@miuandes.cl' LIMIT 1 /*application='Hotellab3'*/[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN /*application='Hotellab3'*/[0m
+  [1m[36mGuest Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "guests" WHERE "guests"."email" = 'oicarrasco@miuandes.cl' LIMIT 1 /*application='Hotellab3'*/[0m
+  [1m[36mGuest Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "guests" WHERE "guests"."document_id" = 'ABCDEF' LIMIT 1 /*application='Hotellab3'*/[0m
+  [1m[36mGuest Create (0.6ms)[0m  [1m[32mINSERT INTO "guests" ("first_name", "last_name", "email", "phone", "document_id", "created_at", "updated_at") VALUES ('Oscar', 'Carrasco', 'oicarrasco@miuandes.cl', '+5691245679', 'ABCDEF', '2025-09-25 18:21:10.286666', '2025-09-25 18:21:10.286666') RETURNING "id" /*application='Hotellab3'*/[0m
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[35mCOMMIT /*application='Hotellab3'*/[0m
+  [1m[36mReservation Load (0.4ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."code" = 'ABC1000' LIMIT 1 /*application='Hotellab3'*/[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN /*application='Hotellab3'*/[0m
+  [1m[36mReservation Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "reservations" WHERE "reservations"."code" = 'ABC1000' LIMIT 1 /*application='Hotellab3'*/[0m
+  [1m[36mReservation Create (0.5ms)[0m  [1m[32mINSERT INTO "reservations" ("code", "guest_id", "room_id", "check_in", "check_out", "status", "adults", "children", "created_at", "updated_at") VALUES ('ABC1000', 1, 1, '2025-09-26', '2025-09-28', 0, 2, 1, '2025-09-25 18:21:10.323585', '2025-09-25 18:21:10.323585') RETURNING "id" /*application='Hotellab3'*/[0m
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[35mCOMMIT /*application='Hotellab3'*/[0m
+  [1m[36mService Load (0.5ms)[0m  [1m[34mSELECT "services".* FROM "services" WHERE "services"."name" = 'Breakfast' LIMIT 1 /*application='Hotellab3'*/[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN /*application='Hotellab3'*/[0m
+  [1m[36mService Create (0.4ms)[0m  [1m[32mINSERT INTO "services" ("name", "price", "is_active", "created_at", "updated_at") VALUES ('Breakfast', 20, TRUE, '2025-09-25 18:21:10.341752', '2025-09-25 18:21:10.341752') RETURNING "id" /*application='Hotellab3'*/[0m
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[35mCOMMIT /*application='Hotellab3'*/[0m
+  [1m[36mServiceUsage Load (0.5ms)[0m  [1m[34mSELECT "service_usages".* FROM "service_usages" WHERE "service_usages"."reservation_id" = 1 AND "service_usages"."service_id" = 1 AND "service_usages"."used_at" = '2025-09-24 18:21:10.350947' LIMIT 1 /*application='Hotellab3'*/[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN /*application='Hotellab3'*/[0m
+  [1m[36mServiceUsage Create (0.5ms)[0m  [1m[32mINSERT INTO "service_usages" ("reservation_id", "service_id", "quantity", "used_at", "note", "created_at", "updated_at") VALUES (1, 1, 2, '2025-09-24 18:21:10.350947', 'Early morning request', '2025-09-25 18:21:10.362837', '2025-09-25 18:21:10.362837') RETURNING "id" /*application='Hotellab3'*/[0m
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[35mCOMMIT /*application='Hotellab3'*/[0m
+  [1m[36mInvoice Load (0.4ms)[0m  [1m[34mSELECT "invoices".* FROM "invoices" WHERE "invoices"."reservation_id" = 1 LIMIT 1 /*application='Hotellab3'*/[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN /*application='Hotellab3'*/[0m
+  [1m[36mInvoice Create (0.5ms)[0m  [1m[32mINSERT INTO "invoices" ("reservation_id", "nights_subtotal", "services_subtotal", "tax", "total", "issued_at", "status", "created_at", "updated_at") VALUES (1, 200, 40, 24, 264, '2025-09-25 18:21:10.385664', 'paid', '2025-09-25 18:21:10.386138', '2025-09-25 18:21:10.386138') RETURNING "id" /*application='Hotellab3'*/[0m
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[35mCOMMIT /*application='Hotellab3'*/[0m
+Started GET "/" for 127.0.0.1 at 2025-09-25 15:21:23 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Hotellab3'*/[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/oscarrusher/.rbenv/versions/3.4.5/lib/ruby/gems/3.4.0/gems/railties-8.0.2.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/oscarrusher/.rbenv/versions/3.4.5/lib/ruby/gems/3.4.0/gems/railties-8.0.2.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.8ms | GC: 0.0ms)
+Completed 200 OK in 48ms (Views: 11.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 1.4ms)
+
+
+Started GET "/rooms" for 127.0.0.1 at 2025-09-25 15:21:25 -0300
+Processing by RoomsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/index.html.erb within layouts/application
+  [1m[36mRoom Load (13.4ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" /*action='index',application='Hotellab3',controller='rooms'*/[0m
+  ↳ app/views/rooms/index.html.erb:14
+  Rendered rooms/index.html.erb within layouts/application (Duration: 33.2ms | GC: 0.0ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 63.2ms | GC: 0.0ms)
+Completed 200 OK in 110ms (Views: 40.7ms | ActiveRecord: 24.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/rooms/1" for 127.0.0.1 at 2025-09-25 15:21:27 -0300
+Processing by RoomsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mRoom Load (0.8ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = 1 LIMIT 1 /*action='show',application='Hotellab3',controller='rooms'*/[0m
+  ↳ app/controllers/rooms_controller.rb:7:in 'RoomsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/show.html.erb within layouts/application
+  Rendered rooms/show.html.erb within layouts/application (Duration: 0.9ms | GC: 0.0ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.5ms | GC: 0.0ms)
+Completed 200 OK in 28ms (Views: 3.3ms | ActiveRecord: 0.8ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/rooms" for 127.0.0.1 at 2025-09-25 15:21:29 -0300
+Processing by RoomsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/index.html.erb within layouts/application
+  [1m[36mRoom Load (0.5ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" /*action='index',application='Hotellab3',controller='rooms'*/[0m
+  ↳ app/views/rooms/index.html.erb:14
+  Rendered rooms/index.html.erb within layouts/application (Duration: 2.3ms | GC: 0.0ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | GC: 0.0ms)
+Completed 200 OK in 15ms (Views: 3.7ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/guests" for 127.0.0.1 at 2025-09-25 15:21:35 -0300
+Processing by GuestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering guests/index.html.erb within layouts/application
+  [1m[36mGuest Load (0.6ms)[0m  [1m[34mSELECT "guests".* FROM "guests" /*action='index',application='Hotellab3',controller='guests'*/[0m
+  ↳ app/views/guests/index.html.erb:15
+  Rendered guests/index.html.erb within layouts/application (Duration: 12.1ms | GC: 0.0ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 14.9ms | GC: 0.0ms)
+Completed 200 OK in 29ms (Views: 12.7ms | ActiveRecord: 2.8ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/guests" for 127.0.0.1 at 2025-09-25 15:21:35 -0300
+Processing by GuestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering guests/index.html.erb within layouts/application
+  [1m[36mGuest Load (0.5ms)[0m  [1m[34mSELECT "guests".* FROM "guests" /*action='index',application='Hotellab3',controller='guests'*/[0m
+  ↳ app/views/guests/index.html.erb:15
+  Rendered guests/index.html.erb within layouts/application (Duration: 2.2ms | GC: 0.0ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.1ms | GC: 0.0ms)
+Completed 200 OK in 16ms (Views: 4.0ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/reservations" for 127.0.0.1 at 2025-09-25 15:21:36 -0300
+Processing by ReservationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering reservations/index.html.erb within layouts/application
+  [1m[36mReservation Load (0.8ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" /*action='index',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/views/reservations/index.html.erb:18
+  [1m[36mGuest Load (0.5ms)[0m  [1m[34mSELECT "guests".* FROM "guests" WHERE "guests"."id" = 1 LIMIT 1 /*action='index',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/views/reservations/index.html.erb:21
+  [1m[36mRoom Load (0.4ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = 1 LIMIT 1 /*action='index',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/views/reservations/index.html.erb:22
+  Rendered reservations/index.html.erb within layouts/application (Duration: 24.4ms | GC: 0.0ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 25.8ms | GC: 0.0ms)
+Completed 200 OK in 42ms (Views: 22.1ms | ActiveRecord: 4.5ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2025-09-25 15:21:41 -0300
+Processing by ServicesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mService Load (0.6ms)[0m  [1m[34mSELECT "services".* FROM "services" /*action='index',application='Hotellab3',controller='services'*/[0m
+  ↳ app/views/services/index.html.erb:13
+  Rendered services/index.html.erb within layouts/application (Duration: 10.1ms | GC: 0.0ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 11.7ms | GC: 0.0ms)
+Completed 200 OK in 25ms (Views: 9.5ms | ActiveRecord: 3.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/reservations" for 127.0.0.1 at 2025-09-25 15:21:51 -0300
+Processing by ReservationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering reservations/index.html.erb within layouts/application
+  [1m[36mReservation Load (0.6ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" /*action='index',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/views/reservations/index.html.erb:18
+  [1m[36mGuest Load (0.4ms)[0m  [1m[34mSELECT "guests".* FROM "guests" WHERE "guests"."id" = 1 LIMIT 1 /*action='index',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/views/reservations/index.html.erb:21
+  [1m[36mRoom Load (0.3ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = 1 LIMIT 1 /*action='index',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/views/reservations/index.html.erb:22
+  Rendered reservations/index.html.erb within layouts/application (Duration: 6.8ms | GC: 0.0ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 8.6ms | GC: 0.0ms)
+Completed 200 OK in 19ms (Views: 8.0ms | ActiveRecord: 1.2ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2025-09-25 15:21:56 -0300
+Processing by ServicesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mService Load (0.5ms)[0m  [1m[34mSELECT "services".* FROM "services" /*action='index',application='Hotellab3',controller='services'*/[0m
+  ↳ app/views/services/index.html.erb:13
+  Rendered services/index.html.erb within layouts/application (Duration: 3.9ms | GC: 0.0ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | GC: 0.0ms)
+Completed 200 OK in 15ms (Views: 5.9ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/reservations/1" for 127.0.0.1 at 2025-09-25 15:21:57 -0300
+Processing by ReservationsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mReservation Load (0.6ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."id" = 1 LIMIT 1 /*action='show',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/controllers/reservations_controller.rb:7:in 'ReservationsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering reservations/show.html.erb within layouts/application
+  [1m[36mGuest Load (0.4ms)[0m  [1m[34mSELECT "guests".* FROM "guests" WHERE "guests"."id" = 1 LIMIT 1 /*action='show',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/views/reservations/show.html.erb:4
+  [1m[36mRoom Load (0.3ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = 1 LIMIT 1 /*action='show',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/views/reservations/show.html.erb:5
+  Rendered reservations/show.html.erb within layouts/application (Duration: 4.7ms | GC: 0.0ms)
+  Rendered shared/_navigation.html.erb (Duration: 1.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 9.1ms | GC: 0.0ms)
+Completed 200 OK in 37ms (Views: 9.6ms | ActiveRecord: 1.3ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/reservations/1" for 127.0.0.1 at 2025-09-25 15:21:57 -0300
+Processing by ReservationsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mReservation Load (0.6ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."id" = 1 LIMIT 1 /*action='show',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/controllers/reservations_controller.rb:7:in 'ReservationsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering reservations/show.html.erb within layouts/application
+  [1m[36mGuest Load (0.5ms)[0m  [1m[34mSELECT "guests".* FROM "guests" WHERE "guests"."id" = 1 LIMIT 1 /*action='show',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/views/reservations/show.html.erb:4
+  [1m[36mRoom Load (0.4ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = 1 LIMIT 1 /*action='show',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/views/reservations/show.html.erb:5
+  Rendered reservations/show.html.erb within layouts/application (Duration: 4.5ms | GC: 0.0ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | GC: 0.0ms)
+Completed 200 OK in 20ms (Views: 5.8ms | ActiveRecord: 1.4ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/reservations" for 127.0.0.1 at 2025-09-25 15:21:59 -0300
+Processing by ReservationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering reservations/index.html.erb within layouts/application
+  [1m[36mReservation Load (0.5ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" /*action='index',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/views/reservations/index.html.erb:18
+  [1m[36mGuest Load (0.4ms)[0m  [1m[34mSELECT "guests".* FROM "guests" WHERE "guests"."id" = 1 LIMIT 1 /*action='index',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/views/reservations/index.html.erb:21
+  [1m[36mRoom Load (0.4ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = 1 LIMIT 1 /*action='index',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/views/reservations/index.html.erb:22
+  Rendered reservations/index.html.erb within layouts/application (Duration: 6.4ms | GC: 0.0ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | GC: 0.0ms)
+Completed 200 OK in 20ms (Views: 8.1ms | ActiveRecord: 1.2ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/rooms" for 127.0.0.1 at 2025-09-25 15:22:43 -0300
+Processing by RoomsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/index.html.erb within layouts/application
+  [1m[36mRoom Load (0.5ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" /*action='index',application='Hotellab3',controller='rooms'*/[0m
+  ↳ app/views/rooms/index.html.erb:14
+  Rendered rooms/index.html.erb within layouts/application (Duration: 2.3ms | GC: 0.0ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.1ms | GC: 0.0ms)
+Completed 200 OK in 19ms (Views: 4.1ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-09-25 15:22:43 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/oscarrusher/.rbenv/versions/3.4.5/lib/ruby/gems/3.4.0/gems/railties-8.0.2.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/oscarrusher/.rbenv/versions/3.4.5/lib/ruby/gems/3.4.0/gems/railties-8.0.2.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.5ms | GC: 0.0ms)
+Completed 200 OK in 31ms (Views: 1.5ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-09-25 15:22:44 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/oscarrusher/.rbenv/versions/3.4.5/lib/ruby/gems/3.4.0/gems/railties-8.0.2.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/oscarrusher/.rbenv/versions/3.4.5/lib/ruby/gems/3.4.0/gems/railties-8.0.2.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.2ms | GC: 0.0ms)
+Completed 200 OK in 10ms (Views: 0.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/rooms" for 127.0.0.1 at 2025-09-25 15:22:47 -0300
+Processing by RoomsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/index.html.erb within layouts/application
+  [1m[36mRoom Load (0.4ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" /*action='index',application='Hotellab3',controller='rooms'*/[0m
+  ↳ app/views/rooms/index.html.erb:14
+  Rendered rooms/index.html.erb within layouts/application (Duration: 2.1ms | GC: 0.0ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | GC: 0.0ms)
+Completed 200 OK in 13ms (Views: 3.9ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Hotellab3'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Hotellab3'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Hotellab3'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Hotellab3'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Hotellab3'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Hotellab3'*/[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[35mSET search_path TO public /*application='Hotellab3'*/[0m
+  [1m[35m (156.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "hotellab3_development" /*application='Hotellab3'*/[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[35mSET search_path TO public /*application='Hotellab3'*/[0m
+  [1m[35m (46.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "hotellab3_test" /*application='Hotellab3'*/[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[35mSET search_path TO public /*application='Hotellab3'*/[0m
+  [1m[35m (71.3ms)[0m  [1m[35mCREATE DATABASE "hotellab3_development" ENCODING = 'unicode' /*application='Hotellab3'*/[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mSET search_path TO public /*application='Hotellab3'*/[0m
+  [1m[35m (74.2ms)[0m  [1m[35mCREATE DATABASE "hotellab3_test" ENCODING = 'unicode' /*application='Hotellab3'*/[0m
+  [1m[35mSQL (14.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql" SCHEMA pg_catalog /*application='Hotellab3'*/[0m
+  [1m[35m (1.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "guests" CASCADE /*application='Hotellab3'*/[0m
+  [1m[35m (6.0ms)[0m  [1m[35mCREATE TABLE "guests" ("id" bigserial primary key, "first_name" character varying NOT NULL, "last_name" character varying NOT NULL, "email" character varying NOT NULL, "phone" character varying NOT NULL, "document_id" character varying NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='Hotellab3'*/[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "invoices" CASCADE /*application='Hotellab3'*/[0m
+  [1m[35m (5.3ms)[0m  [1m[35mCREATE TABLE "invoices" ("id" bigserial primary key, "reservation_id" integer NOT NULL, "nights_subtotal" integer NOT NULL, "services_subtotal" integer NOT NULL, "tax" integer NOT NULL, "total" integer NOT NULL, "issued_at" timestamp(6) NOT NULL, "status" character varying NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='Hotellab3'*/[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "reservations" CASCADE /*application='Hotellab3'*/[0m
+  [1m[35m (5.1ms)[0m  [1m[35mCREATE TABLE "reservations" ("id" bigserial primary key, "code" character varying NOT NULL, "guest_id" integer NOT NULL, "room_id" integer NOT NULL, "check_in" date NOT NULL, "check_out" date NOT NULL, "status" integer NOT NULL, "adults" integer NOT NULL, "children" integer NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='Hotellab3'*/[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "rooms" CASCADE /*application='Hotellab3'*/[0m
+  [1m[35m (4.6ms)[0m  [1m[35mCREATE TABLE "rooms" ("id" bigserial primary key, "number" character varying NOT NULL, "room_type" integer NOT NULL, "price" integer NOT NULL, "status" integer NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='Hotellab3'*/[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "service_usages" CASCADE /*application='Hotellab3'*/[0m
+  [1m[35m (4.6ms)[0m  [1m[35mCREATE TABLE "service_usages" ("id" bigserial primary key, "reservation_id" integer NOT NULL, "service_id" integer NOT NULL, "quantity" integer NOT NULL, "used_at" timestamp(6) NOT NULL, "note" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='Hotellab3'*/[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "services" CASCADE /*application='Hotellab3'*/[0m
+  [1m[35m (4.8ms)[0m  [1m[35mCREATE TABLE "services" ("id" bigserial primary key, "name" character varying NOT NULL, "price" integer NOT NULL, "is_active" boolean NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='Hotellab3'*/[0m
+  [1m[35m (5.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY) /*application='Hotellab3'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Hotellab3'*/[0m
+  [1m[35m (2.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20250904185552) /*application='Hotellab3'*/[0m
+  [1m[35m (2.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20250904185529),
+(20250904185513),
+(20250904185502),
+(20250904185446),
+(20250904185412); /*application='Hotellab3'*/[0m
+  [1m[35m (4.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='Hotellab3'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Hotellab3'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (2.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2025-09-25 18:23:52.982402', '2025-09-25 18:23:52.982406') RETURNING "key" /*application='Hotellab3'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Hotellab3'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'schema_sha1' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Hotellab3'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (3.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('schema_sha1', 'b30f9104eca42b8a4f217f16db8fad2ef8d53a69', '2025-09-25 18:23:52.990184', '2025-09-25 18:23:52.990187') RETURNING "key" /*application='Hotellab3'*/[0m
+  [1m[35mSQL (11.7ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql" SCHEMA pg_catalog /*application='Hotellab3'*/[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "guests" CASCADE /*application='Hotellab3'*/[0m
+  [1m[35m (5.7ms)[0m  [1m[35mCREATE TABLE "guests" ("id" bigserial primary key, "first_name" character varying NOT NULL, "last_name" character varying NOT NULL, "email" character varying NOT NULL, "phone" character varying NOT NULL, "document_id" character varying NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='Hotellab3'*/[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "invoices" CASCADE /*application='Hotellab3'*/[0m
+  [1m[35m (4.8ms)[0m  [1m[35mCREATE TABLE "invoices" ("id" bigserial primary key, "reservation_id" integer NOT NULL, "nights_subtotal" integer NOT NULL, "services_subtotal" integer NOT NULL, "tax" integer NOT NULL, "total" integer NOT NULL, "issued_at" timestamp(6) NOT NULL, "status" character varying NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='Hotellab3'*/[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "reservations" CASCADE /*application='Hotellab3'*/[0m
+  [1m[35m (5.6ms)[0m  [1m[35mCREATE TABLE "reservations" ("id" bigserial primary key, "code" character varying NOT NULL, "guest_id" integer NOT NULL, "room_id" integer NOT NULL, "check_in" date NOT NULL, "check_out" date NOT NULL, "status" integer NOT NULL, "adults" integer NOT NULL, "children" integer NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='Hotellab3'*/[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "rooms" CASCADE /*application='Hotellab3'*/[0m
+  [1m[35m (4.9ms)[0m  [1m[35mCREATE TABLE "rooms" ("id" bigserial primary key, "number" character varying NOT NULL, "room_type" integer NOT NULL, "price" integer NOT NULL, "status" integer NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='Hotellab3'*/[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "service_usages" CASCADE /*application='Hotellab3'*/[0m
+  [1m[35m (4.6ms)[0m  [1m[35mCREATE TABLE "service_usages" ("id" bigserial primary key, "reservation_id" integer NOT NULL, "service_id" integer NOT NULL, "quantity" integer NOT NULL, "used_at" timestamp(6) NOT NULL, "note" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='Hotellab3'*/[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "services" CASCADE /*application='Hotellab3'*/[0m
+  [1m[35m (4.5ms)[0m  [1m[35mCREATE TABLE "services" ("id" bigserial primary key, "name" character varying NOT NULL, "price" integer NOT NULL, "is_active" boolean NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='Hotellab3'*/[0m
+  [1m[35m (5.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY) /*application='Hotellab3'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Hotellab3'*/[0m
+  [1m[35m (3.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20250904185552) /*application='Hotellab3'*/[0m
+  [1m[35m (2.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20250904185529),
+(20250904185513),
+(20250904185502),
+(20250904185446),
+(20250904185412); /*application='Hotellab3'*/[0m
+  [1m[35m (4.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='Hotellab3'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Hotellab3'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (2.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2025-09-25 18:23:53.089046', '2025-09-25 18:23:53.089049') RETURNING "key" /*application='Hotellab3'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Hotellab3'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Update (2.4ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = 'test', "updated_at" = '2025-09-25 18:23:53.096001' WHERE "ar_internal_metadata"."key" = 'environment' /*application='Hotellab3'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'schema_sha1' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Hotellab3'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (2.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('schema_sha1', 'b30f9104eca42b8a4f217f16db8fad2ef8d53a69', '2025-09-25 18:23:53.101810', '2025-09-25 18:23:53.101813') RETURNING "key" /*application='Hotellab3'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Hotellab3'*/[0m
+  [1m[36mRoom Load (0.6ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."number" = '101' LIMIT 1 /*application='Hotellab3'*/[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN /*application='Hotellab3'*/[0m
+  [1m[36mRoom Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "rooms" WHERE "rooms"."number" = '101' LIMIT 1 /*application='Hotellab3'*/[0m
+  [1m[36mRoom Create (0.5ms)[0m  [1m[32mINSERT INTO "rooms" ("number", "room_type", "price", "status", "created_at", "updated_at") VALUES ('101', 0, 100, 0, '2025-09-25 18:23:53.164702', '2025-09-25 18:23:53.164702') RETURNING "id" /*application='Hotellab3'*/[0m
+  [1m[36mTRANSACTION (3.4ms)[0m  [1m[35mCOMMIT /*application='Hotellab3'*/[0m
+  [1m[36mGuest Load (0.4ms)[0m  [1m[34mSELECT "guests".* FROM "guests" WHERE "guests"."email" = 'oicarrasco@miuandes.cl' LIMIT 1 /*application='Hotellab3'*/[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN /*application='Hotellab3'*/[0m
+  [1m[36mGuest Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "guests" WHERE "guests"."email" = 'oicarrasco@miuandes.cl' LIMIT 1 /*application='Hotellab3'*/[0m
+  [1m[36mGuest Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "guests" WHERE "guests"."document_id" = 'ABCDEF' LIMIT 1 /*application='Hotellab3'*/[0m
+  [1m[36mGuest Create (0.5ms)[0m  [1m[32mINSERT INTO "guests" ("first_name", "last_name", "email", "phone", "document_id", "created_at", "updated_at") VALUES ('Oscar', 'Carrasco', 'oicarrasco@miuandes.cl', '+5691245679', 'ABCDEF', '2025-09-25 18:23:53.190642', '2025-09-25 18:23:53.190642') RETURNING "id" /*application='Hotellab3'*/[0m
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[35mCOMMIT /*application='Hotellab3'*/[0m
+  [1m[36mReservation Load (0.4ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."code" = 'ABC1000' LIMIT 1 /*application='Hotellab3'*/[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN /*application='Hotellab3'*/[0m
+  [1m[36mReservation Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "reservations" WHERE "reservations"."code" = 'ABC1000' LIMIT 1 /*application='Hotellab3'*/[0m
+  [1m[36mReservation Create (0.5ms)[0m  [1m[32mINSERT INTO "reservations" ("code", "guest_id", "room_id", "check_in", "check_out", "status", "adults", "children", "created_at", "updated_at") VALUES ('ABC1000', 1, 1, '2025-09-26', '2025-09-28', 0, 2, 1, '2025-09-25 18:23:53.222254', '2025-09-25 18:23:53.222254') RETURNING "id" /*application='Hotellab3'*/[0m
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[35mCOMMIT /*application='Hotellab3'*/[0m
+  [1m[36mService Load (0.4ms)[0m  [1m[34mSELECT "services".* FROM "services" WHERE "services"."name" = 'Breakfast' LIMIT 1 /*application='Hotellab3'*/[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN /*application='Hotellab3'*/[0m
+  [1m[36mService Create (0.4ms)[0m  [1m[32mINSERT INTO "services" ("name", "price", "is_active", "created_at", "updated_at") VALUES ('Breakfast', 20, TRUE, '2025-09-25 18:23:53.240334', '2025-09-25 18:23:53.240334') RETURNING "id" /*application='Hotellab3'*/[0m
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[35mCOMMIT /*application='Hotellab3'*/[0m
+  [1m[36mServiceUsage Load (1.1ms)[0m  [1m[34mSELECT "service_usages".* FROM "service_usages" WHERE "service_usages"."reservation_id" = 1 AND "service_usages"."service_id" = 1 AND "service_usages"."used_at" = '2025-09-24 18:23:53.248628' LIMIT 1 /*application='Hotellab3'*/[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN /*application='Hotellab3'*/[0m
+  [1m[36mServiceUsage Create (0.5ms)[0m  [1m[32mINSERT INTO "service_usages" ("reservation_id", "service_id", "quantity", "used_at", "note", "created_at", "updated_at") VALUES (1, 1, 2, '2025-09-24 18:23:53.248628', 'Early morning request', '2025-09-25 18:23:53.263228', '2025-09-25 18:23:53.263228') RETURNING "id" /*application='Hotellab3'*/[0m
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[35mCOMMIT /*application='Hotellab3'*/[0m
+  [1m[36mInvoice Load (0.5ms)[0m  [1m[34mSELECT "invoices".* FROM "invoices" WHERE "invoices"."reservation_id" = 1 LIMIT 1 /*application='Hotellab3'*/[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN /*application='Hotellab3'*/[0m
+  [1m[36mInvoice Create (0.6ms)[0m  [1m[32mINSERT INTO "invoices" ("reservation_id", "nights_subtotal", "services_subtotal", "tax", "total", "issued_at", "status", "created_at", "updated_at") VALUES (1, 200, 40, 24, 264, '2025-09-25 18:23:53.305123', 'paid', '2025-09-25 18:23:53.305682', '2025-09-25 18:23:53.305682') RETURNING "id" /*application='Hotellab3'*/[0m
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[35mCOMMIT /*application='Hotellab3'*/[0m
+Started GET "/rooms/1" for 127.0.0.1 at 2025-09-25 15:24:00 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Hotellab3'*/[0m
+Processing by RoomsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mRoom Load (0.5ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = 1 LIMIT 1 /*action='show',application='Hotellab3',controller='rooms'*/[0m
+  ↳ app/controllers/rooms_controller.rb:7:in 'RoomsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/show.html.erb within layouts/application
+  Rendered rooms/show.html.erb within layouts/application (Duration: 6.1ms | GC: 0.0ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 33.7ms | GC: 0.0ms)
+Completed 200 OK in 130ms (Views: 40.6ms | ActiveRecord: 20.3ms (1 query, 0 cached) | GC: 0.7ms)
+
+
+Started GET "/assets/application-8efdf9df.css" for 127.0.0.1 at 2025-09-25 15:24:00 -0300
+Started GET "/rooms" for 127.0.0.1 at 2025-09-25 15:24:07 -0300
+Processing by RoomsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/index.html.erb within layouts/application
+  [1m[36mRoom Load (0.7ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" /*action='index',application='Hotellab3',controller='rooms'*/[0m
+  ↳ app/views/rooms/index.html.erb:14
+  Rendered rooms/index.html.erb within layouts/application (Duration: 4.7ms | GC: 0.0ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 21.2ms | GC: 0.0ms)
+Completed 200 OK in 60ms (Views: 21.4ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/rooms" for 127.0.0.1 at 2025-09-25 15:24:08 -0300
+Processing by RoomsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/index.html.erb within layouts/application
+  [1m[36mRoom Load (1.6ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" /*action='index',application='Hotellab3',controller='rooms'*/[0m
+  ↳ app/views/rooms/index.html.erb:14
+  Rendered rooms/index.html.erb within layouts/application (Duration: 5.9ms | GC: 0.0ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 11.7ms | GC: 0.0ms)
+Completed 200 OK in 22ms (Views: 10.8ms | ActiveRecord: 1.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
