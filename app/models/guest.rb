@@ -1,5 +1,5 @@
 class Guest < ApplicationRecord
-    has_many :reservations
+    has_many :reservations, dependent: :destroy
 
     validates :first_name, presence: true
     validates :last_name, presence: true
