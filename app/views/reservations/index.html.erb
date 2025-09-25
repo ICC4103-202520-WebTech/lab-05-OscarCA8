@@ -1,0 +1,35 @@
+<h1>Reservations</h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Code</th>
+      <th>Guest</th>
+      <th>Room</th>
+      <th>Check In</th>
+      <th>Check Out</th>
+      <th>Status</th>
+      <th>Adults</th>
+      <th>Children</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @reservations.each do |reservation| %>
+      <tr>
+        <td><%= reservation.code %></td>
+        <td><%= reservation.guest.first_name %> <%= reservation.guest.last_name %></td>
+        <td><%= reservation.room.number %></td>
+        <td><%= reservation.check_in %></td>
+        <td><%= reservation.check_out %></td>
+        <td><%= reservation.status %></td>
+        <td><%= reservation.adults %></td>
+        <td><%= reservation.children %></td>
+        <td><%= link_to 'Details', reservation_path(reservation), class: 'btn btn-primary btn-sm' %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+

@@ -1,0 +1,13 @@
+<h1>Reservation <%= @reservation.code %></h1>
+
+<ul class="list-group">
+  <li class="list-group-item"><strong>Guest:</strong> <%= @reservation.guest.first_name %> <%= @reservation.guest.last_name %></li>
+  <li class="list-group-item"><strong>Room Number:</strong> <%= @reservation.room.number %></li>
+  <li class="list-group-item"><strong>Check In:</strong> <%= @reservation.check_in %></li>
+  <li class="list-group-item"><strong>Check Out:</strong> <%= @reservation.check_out %></li>
+  <li class="list-group-item"><strong>Status:</strong> <%= @reservation.status %></li>
+  <li class="list-group-item"><strong>Adults:</strong> <%= @reservation.adults %></li>
+  <li class="list-group-item"><strong>Children:</strong> <%= @reservation.children %></li>
+</ul>
+
+<%= link_to 'Back to Reservations', reservations_path, class: 'btn btn-secondary mt-3' %>

@@ -1,0 +1,2290 @@
+  [1m[35mSQL (0.8ms)[0m  [1m[35mSET search_path TO public /*application='Hotellab3'*/[0m
+  [1m[35m (75.6ms)[0m  [1m[35mCREATE DATABASE "hotellab3_development" ENCODING = 'unicode' /*application='Hotellab3'*/[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[35mSET search_path TO public /*application='Hotellab3'*/[0m
+  [1m[35m (10.5ms)[0m  [1m[35mCREATE DATABASE "hotellab3_test" ENCODING = 'unicode' /*application='Hotellab3'*/[0m
+Started GET "/" for 127.0.0.1 at 2025-09-11 15:19:24 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (4.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Hotellab3'*/[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/oscarrusher/.rbenv/versions/3.4.5/lib/ruby/gems/3.4.0/gems/railties-8.0.2.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/oscarrusher/.rbenv/versions/3.4.5/lib/ruby/gems/3.4.0/gems/railties-8.0.2.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.1ms | GC: 0.0ms)
+Completed 200 OK in 65ms (Views: 17.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2025-09-11 15:19:46 -0300
+Processing by ServicesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering services/index.html.erb within layouts/application
+  Rendered services/index.html.erb within layouts/application (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 17.1ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 101ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::Template::Error (The asset 'application.js' was not found in the load path.)
+Caused by: Propshaft::MissingAssetError (The asset 'application.js' was not found in the load path.)
+
+Information for: ActionView::Template::Error (The asset 'application.js' was not found in the load path.):
+    19: 
+    20:     <%# Includes all stylesheet files in app/assets/stylesheets %>
+    21:     <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
+    22:     <%= javascript_include_tag "application", "data-turbo-track": "reload", type: "module" %>
+    23:   </head>
+    24: 
+    25:   <body>
+  
+app/views/layouts/application.html.erb:22
+
+Information for cause: Propshaft::MissingAssetError (The asset 'application.js' was not found in the load path.):
+  
+app/views/layouts/application.html.erb:22
+Started GET "/favicon.ico" for 127.0.0.1 at 2025-09-11 15:19:47 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/reservations" for 127.0.0.1 at 2025-09-11 15:20:51 -0300
+Processing by ReservationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering reservations/index.html.erb within layouts/application
+  [1m[36mReservation Load (52.1ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" /*action='index',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/views/reservations/index.html.erb:4
+  Rendered reservations/index.html.erb within layouts/application (Duration: 97.7ms | GC: 2.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 98.2ms | GC: 2.0ms)
+Completed 500 Internal Server Error in 116ms (ActiveRecord: 104.7ms (1 query, 0 cached) | GC: 2.9ms)
+
+
+  
+ActionView::Template::Error (Missing partial shared/_navigation with {locale: [:en], formats: [:html], variants: [], handlers: [:raw, :erb, :html, :builder, :ruby, :jbuilder]}.
+
+Searched in:
+  * "/home/oscarrusher/lab_4/hotellab3/app/views"
+  * "/home/oscarrusher/.rbenv/versions/3.4.5/lib/ruby/gems/3.4.0/gems/turbo-rails-2.0.16/app/views"
+  * "/home/oscarrusher/.rbenv/versions/3.4.5/lib/ruby/gems/3.4.0/gems/actiontext-8.0.2.1/app/views"
+  * "/home/oscarrusher/.rbenv/versions/3.4.5/lib/ruby/gems/3.4.0/gems/actionmailbox-8.0.2.1/app/views"
+)
+Caused by: ActionView::MissingTemplate (Missing partial shared/_navigation with {locale: [:en], formats: [:html], variants: [], handlers: [:raw, :erb, :html, :builder, :ruby, :jbuilder]}.
+
+Searched in:
+  * "/home/oscarrusher/lab_4/hotellab3/app/views"
+  * "/home/oscarrusher/.rbenv/versions/3.4.5/lib/ruby/gems/3.4.0/gems/turbo-rails-2.0.16/app/views"
+  * "/home/oscarrusher/.rbenv/versions/3.4.5/lib/ruby/gems/3.4.0/gems/actiontext-8.0.2.1/app/views"
+  * "/home/oscarrusher/.rbenv/versions/3.4.5/lib/ruby/gems/3.4.0/gems/actionmailbox-8.0.2.1/app/views"
+)
+
+Information for: ActionView::Template::Error (Missing partial shared/_navigation with {locale: [:en], formats: [:html], variants: [], handlers: [:raw, :erb, :html, :builder, :ruby, :jbuilder]}.
+
+Searched in:
+  * "/home/oscarrusher/lab_4/hotellab3/app/views"
+  * "/home/oscarrusher/.rbenv/versions/3.4.5/lib/ruby/gems/3.4.0/gems/turbo-rails-2.0.16/app/views"
+  * "/home/oscarrusher/.rbenv/versions/3.4.5/lib/ruby/gems/3.4.0/gems/actiontext-8.0.2.1/app/views"
+  * "/home/oscarrusher/.rbenv/versions/3.4.5/lib/ruby/gems/3.4.0/gems/actionmailbox-8.0.2.1/app/views"
+):
+    6:   <% end %>
+    7: </ul>
+    8: 
+    9: <%= render 'shared/navigation' %>
+  
+app/views/reservations/index.html.erb:9
+
+Information for cause: ActionView::MissingTemplate (Missing partial shared/_navigation with {locale: [:en], formats: [:html], variants: [], handlers: [:raw, :erb, :html, :builder, :ruby, :jbuilder]}.
+
+Searched in:
+  * "/home/oscarrusher/lab_4/hotellab3/app/views"
+  * "/home/oscarrusher/.rbenv/versions/3.4.5/lib/ruby/gems/3.4.0/gems/turbo-rails-2.0.16/app/views"
+  * "/home/oscarrusher/.rbenv/versions/3.4.5/lib/ruby/gems/3.4.0/gems/actiontext-8.0.2.1/app/views"
+  * "/home/oscarrusher/.rbenv/versions/3.4.5/lib/ruby/gems/3.4.0/gems/actionmailbox-8.0.2.1/app/views"
+):
+  
+app/views/reservations/index.html.erb:9
+Started GET "/reservations" for 127.0.0.1 at 2025-09-11 15:21:10 -0300
+Processing by ReservationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering reservations/index.html.erb within layouts/application
+  [1m[36mReservation Load (0.5ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" /*action='index',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/views/reservations/index.html.erb:4
+  Rendered reservations/index.html.erb within layouts/application (Duration: 22.4ms | GC: 7.6ms)
+  Rendered layout layouts/application.html.erb (Duration: 29.5ms | GC: 11.2ms)
+Completed 500 Internal Server Error in 48ms (ActiveRecord: 6.7ms (1 query, 0 cached) | GC: 15.8ms)
+
+
+  
+ActionView::Template::Error (The asset 'application.js' was not found in the load path.)
+Caused by: Propshaft::MissingAssetError (The asset 'application.js' was not found in the load path.)
+
+Information for: ActionView::Template::Error (The asset 'application.js' was not found in the load path.):
+    19: 
+    20:     <%# Includes all stylesheet files in app/assets/stylesheets %>
+    21:     <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
+    22:     <%= javascript_include_tag "application", "data-turbo-track": "reload", type: "module" %>
+    23:   </head>
+    24: 
+    25:   <body>
+  
+app/views/layouts/application.html.erb:22
+
+Information for cause: Propshaft::MissingAssetError (The asset 'application.js' was not found in the load path.):
+  
+app/views/layouts/application.html.erb:22
+Started GET "/reservations" for 127.0.0.1 at 2025-09-11 15:24:54 -0300
+Processing by ReservationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering reservations/index.html.erb within layouts/application
+  [1m[36mReservation Load (0.5ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" /*action='index',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/views/reservations/index.html.erb:4
+  Rendered reservations/index.html.erb within layouts/application (Duration: 27.6ms | GC: 13.7ms)
+  Rendered layout layouts/application.html.erb (Duration: 32.9ms | GC: 16.7ms)
+Completed 500 Internal Server Error in 53ms (ActiveRecord: 4.3ms (1 query, 0 cached) | GC: 22.6ms)
+
+
+  
+ActionView::Template::Error (The asset 'application.js' was not found in the load path.)
+Caused by: Propshaft::MissingAssetError (The asset 'application.js' was not found in the load path.)
+
+Information for: ActionView::Template::Error (The asset 'application.js' was not found in the load path.):
+    19: 
+    20:     <%# Includes all stylesheet files in app/assets/stylesheets %>
+    21:     <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
+    22:     <%= javascript_include_tag "application", "data-turbo-track": "reload", type: "module", defer: true %>
+    23:   </head>
+    24: 
+    25:   <body>
+  
+app/views/layouts/application.html.erb:22
+
+Information for cause: Propshaft::MissingAssetError (The asset 'application.js' was not found in the load path.):
+  
+app/views/layouts/application.html.erb:22
+Started GET "/reservations" for 127.0.0.1 at 2025-09-11 15:30:45 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Hotellab3'*/[0m
+Processing by ReservationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering reservations/index.html.erb within layouts/application
+  [1m[36mReservation Load (11.5ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" /*action='index',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/views/reservations/index.html.erb:4
+  Rendered reservations/index.html.erb within layouts/application (Duration: 32.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 45.7ms | GC: 0.0ms)
+Completed 200 OK in 116ms (Views: 23.8ms | ActiveRecord: 26.4ms (1 query, 0 cached) | GC: 1.0ms)
+
+
+Started GET "/assets/application-eddaa668.js" for 127.0.0.1 at 2025-09-11 15:30:46 -0300
+Started GET "/reservations/1" for 127.0.0.1 at 2025-09-11 15:30:47 -0300
+Processing by ReservationsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mReservation Load (1.2ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."id" = 1 LIMIT 1 /*action='show',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/controllers/reservations_controller.rb:7:in 'ReservationsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering reservations/show.html.erb within layouts/application
+  Rendered reservations/show.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | GC: 0.0ms)
+Completed 200 OK in 44ms (Views: 11.8ms | ActiveRecord: 1.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/reservations/1" for 127.0.0.1 at 2025-09-11 15:30:50 -0300
+Processing by ReservationsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mReservation Load (3.2ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."id" = 1 LIMIT 1 /*action='show',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/controllers/reservations_controller.rb:7:in 'ReservationsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering reservations/show.html.erb within layouts/application
+  Rendered reservations/show.html.erb within layouts/application (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.2ms | GC: 0.0ms)
+Completed 200 OK in 20ms (Views: 1.7ms | ActiveRecord: 3.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Hotellab3'*/[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN /*application='Hotellab3'*/[0m
+  [1m[36mRoom Create (11.5ms)[0m  [1m[32mINSERT INTO "rooms" ("number", "room_type", "price", "status", "created_at", "updated_at") VALUES ('101', 0, 100, 0, '2025-09-11 18:31:15.556176', '2025-09-11 18:31:15.556176') RETURNING "id" /*application='Hotellab3'*/[0m
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[35mCOMMIT /*application='Hotellab3'*/[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN /*application='Hotellab3'*/[0m
+  [1m[36mGuest Create (5.2ms)[0m  [1m[32mINSERT INTO "guests" ("first_name", "last_name", "email", "phone", "document_id", "created_at", "updated_at") VALUES ('Oscar', 'Carrasco', 'oicarrasco@miuandes.cl', '+5691245679', 'ABCDEF', '2025-09-11 18:31:15.582591', '2025-09-11 18:31:15.582591') RETURNING "id" /*application='Hotellab3'*/[0m
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mCOMMIT /*application='Hotellab3'*/[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN /*application='Hotellab3'*/[0m
+  [1m[36mReservation Create (4.2ms)[0m  [1m[32mINSERT INTO "reservations" ("code", "guest_id", "room_id", "check_in", "check_out", "status", "adults", "children", "created_at", "updated_at") VALUES ('ABC1000', 1, 1, '2025-09-12', '2025-09-14', 0, 2, 1, '2025-09-11 18:31:15.601538', '2025-09-11 18:31:15.601538') RETURNING "id" /*application='Hotellab3'*/[0m
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[35mCOMMIT /*application='Hotellab3'*/[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN /*application='Hotellab3'*/[0m
+  [1m[36mService Create (3.5ms)[0m  [1m[32mINSERT INTO "services" ("name", "price", "is_active", "created_at", "updated_at") VALUES ('Breakfast', 20, TRUE, '2025-09-11 18:31:15.620269', '2025-09-11 18:31:15.620269') RETURNING "id" /*application='Hotellab3'*/[0m
+  [1m[36mTRANSACTION (3.3ms)[0m  [1m[35mCOMMIT /*application='Hotellab3'*/[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN /*application='Hotellab3'*/[0m
+  [1m[36mServiceUsage Create (3.9ms)[0m  [1m[32mINSERT INTO "service_usages" ("reservation_id", "service_id", "quantity", "used_at", "note", "created_at", "updated_at") VALUES (1, 1, 2, '2025-09-10 18:31:15.631260', 'Early morning request', '2025-09-11 18:31:15.639094', '2025-09-11 18:31:15.639094') RETURNING "id" /*application='Hotellab3'*/[0m
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[35mCOMMIT /*application='Hotellab3'*/[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN /*application='Hotellab3'*/[0m
+  [1m[36mInvoice Create (3.6ms)[0m  [1m[32mINSERT INTO "invoices" ("reservation_id", "nights_subtotal", "services_subtotal", "tax", "total", "issued_at", "status", "created_at", "updated_at") VALUES (1, 200, 40, 24, 264, '2025-09-11 18:31:15.649923', 'paid', '2025-09-11 18:31:15.657961', '2025-09-11 18:31:15.657961') RETURNING "id" /*application='Hotellab3'*/[0m
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT /*application='Hotellab3'*/[0m
+Started GET "/reservations/1" for 127.0.0.1 at 2025-09-11 15:31:28 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Hotellab3'*/[0m
+Processing by ReservationsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mReservation Load (0.6ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."id" = 1 LIMIT 1 /*action='show',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/controllers/reservations_controller.rb:7:in 'ReservationsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering reservations/show.html.erb within layouts/application
+  Rendered reservations/show.html.erb within layouts/application (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 18.8ms | GC: 0.0ms)
+Completed 200 OK in 91ms (Views: 21.4ms | ActiveRecord: 25.0ms (1 query, 0 cached) | GC: 0.9ms)
+
+
+Started GET "/reservations" for 127.0.0.1 at 2025-09-11 15:31:33 -0300
+Processing by ReservationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering reservations/index.html.erb within layouts/application
+  [1m[36mReservation Load (0.5ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" /*action='index',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/views/reservations/index.html.erb:4
+  Rendered reservations/index.html.erb within layouts/application (Duration: 3.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | GC: 0.0ms)
+Completed 200 OK in 16ms (Views: 4.5ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/reservations/34" for 127.0.0.1 at 2025-09-11 15:31:35 -0300
+Processing by ReservationsController#show as HTML
+  Parameters: {"id" => "34"}
+  [1m[36mReservation Load (0.7ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."id" = 34 LIMIT 1 /*action='show',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/controllers/reservations_controller.rb:7:in 'ReservationsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering reservations/show.html.erb within layouts/application
+  Rendered reservations/show.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | GC: 0.0ms)
+Completed 200 OK in 19ms (Views: 2.5ms | ActiveRecord: 0.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/reservations/34" for 127.0.0.1 at 2025-09-11 15:32:13 -0300
+Processing by ReservationsController#show as HTML
+  Parameters: {"id" => "34"}
+  [1m[36mReservation Load (0.5ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."id" = 34 LIMIT 1 /*action='show',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/controllers/reservations_controller.rb:7:in 'ReservationsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering reservations/show.html.erb within layouts/application
+  Rendered reservations/show.html.erb within layouts/application (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | GC: 0.0ms)
+Completed 200 OK in 36ms (Views: 3.6ms | ActiveRecord: 5.9ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/reservations" for 127.0.0.1 at 2025-09-11 15:32:16 -0300
+Processing by ReservationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering reservations/index.html.erb within layouts/application
+  [1m[36mReservation Load (0.6ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" /*action='index',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/views/reservations/index.html.erb:4
+  Rendered reservations/index.html.erb within layouts/application (Duration: 7.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 8.3ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::Template::Error (Missing partial shared/_navigation with {locale: [:en], formats: [:html], variants: [], handlers: [:raw, :erb, :html, :builder, :ruby, :jbuilder]}.
+
+Searched in:
+  * "/home/oscarrusher/lab_4/hotellab3/app/views"
+  * "/home/oscarrusher/.rbenv/versions/3.4.5/lib/ruby/gems/3.4.0/gems/turbo-rails-2.0.16/app/views"
+  * "/home/oscarrusher/.rbenv/versions/3.4.5/lib/ruby/gems/3.4.0/gems/actiontext-8.0.2.1/app/views"
+  * "/home/oscarrusher/.rbenv/versions/3.4.5/lib/ruby/gems/3.4.0/gems/actionmailbox-8.0.2.1/app/views"
+)
+Caused by: ActionView::MissingTemplate (Missing partial shared/_navigation with {locale: [:en], formats: [:html], variants: [], handlers: [:raw, :erb, :html, :builder, :ruby, :jbuilder]}.
+
+Searched in:
+  * "/home/oscarrusher/lab_4/hotellab3/app/views"
+  * "/home/oscarrusher/.rbenv/versions/3.4.5/lib/ruby/gems/3.4.0/gems/turbo-rails-2.0.16/app/views"
+  * "/home/oscarrusher/.rbenv/versions/3.4.5/lib/ruby/gems/3.4.0/gems/actiontext-8.0.2.1/app/views"
+  * "/home/oscarrusher/.rbenv/versions/3.4.5/lib/ruby/gems/3.4.0/gems/actionmailbox-8.0.2.1/app/views"
+)
+
+Information for: ActionView::Template::Error (Missing partial shared/_navigation with {locale: [:en], formats: [:html], variants: [], handlers: [:raw, :erb, :html, :builder, :ruby, :jbuilder]}.
+
+Searched in:
+  * "/home/oscarrusher/lab_4/hotellab3/app/views"
+  * "/home/oscarrusher/.rbenv/versions/3.4.5/lib/ruby/gems/3.4.0/gems/turbo-rails-2.0.16/app/views"
+  * "/home/oscarrusher/.rbenv/versions/3.4.5/lib/ruby/gems/3.4.0/gems/actiontext-8.0.2.1/app/views"
+  * "/home/oscarrusher/.rbenv/versions/3.4.5/lib/ruby/gems/3.4.0/gems/actionmailbox-8.0.2.1/app/views"
+):
+    6:   <% end %>
+    7: </ul>
+    8: 
+    9: <%= render 'shared/navigation' %>
+  
+app/views/reservations/index.html.erb:9
+
+Information for cause: ActionView::MissingTemplate (Missing partial shared/_navigation with {locale: [:en], formats: [:html], variants: [], handlers: [:raw, :erb, :html, :builder, :ruby, :jbuilder]}.
+
+Searched in:
+  * "/home/oscarrusher/lab_4/hotellab3/app/views"
+  * "/home/oscarrusher/.rbenv/versions/3.4.5/lib/ruby/gems/3.4.0/gems/turbo-rails-2.0.16/app/views"
+  * "/home/oscarrusher/.rbenv/versions/3.4.5/lib/ruby/gems/3.4.0/gems/actiontext-8.0.2.1/app/views"
+  * "/home/oscarrusher/.rbenv/versions/3.4.5/lib/ruby/gems/3.4.0/gems/actionmailbox-8.0.2.1/app/views"
+):
+  
+app/views/reservations/index.html.erb:9
+Started GET "/reservations" for 127.0.0.1 at 2025-09-11 15:37:23 -0300
+Processing by ReservationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering reservations/index.html.erb within layouts/application
+  [1m[36mReservation Load (0.6ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" /*action='index',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/views/reservations/index.html.erb:4
+  Rendered reservations/index.html.erb within layouts/application (Duration: 16.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 17.7ms | GC: 0.0ms)
+Completed 200 OK in 31ms (Views: 12.4ms | ActiveRecord: 7.5ms (1 query, 0 cached) | GC: 1.0ms)
+
+
+Started GET "/reservations/1" for 127.0.0.1 at 2025-09-11 15:37:24 -0300
+Processing by ReservationsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mReservation Load (0.7ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."id" = 1 LIMIT 1 /*action='show',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/controllers/reservations_controller.rb:7:in 'ReservationsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering reservations/show.html.erb within layouts/application
+  Rendered reservations/show.html.erb within layouts/application (Duration: 0.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | GC: 1.1ms)
+Completed 200 OK in 21ms (Views: 4.0ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 1.7ms)
+
+
+Started GET "/reservations" for 127.0.0.1 at 2025-09-11 15:38:25 -0300
+Processing by ReservationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering reservations/index.html.erb within layouts/application
+  [1m[36mReservation Load (0.6ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" /*action='index',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/views/reservations/index.html.erb:4
+  Rendered reservations/index.html.erb within layouts/application (Duration: 23.2ms | GC: 8.6ms)
+  Rendered layout layouts/application.html.erb (Duration: 28.7ms | GC: 10.0ms)
+Completed 200 OK in 46ms (Views: 27.4ms | ActiveRecord: 4.2ms (1 query, 0 cached) | GC: 11.9ms)
+
+
+Started GET "/rooms" for 127.0.0.1 at 2025-09-11 15:38:27 -0300
+Processing by RoomsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/index.html.erb within layouts/application
+  Rendered rooms/index.html.erb within layouts/application (Duration: 0.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | GC: 1.3ms)
+Completed 200 OK in 23ms (Views: 5.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 4.3ms)
+
+
+Started GET "/guests" for 127.0.0.1 at 2025-09-11 15:38:30 -0300
+Processing by GuestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering guests/index.html.erb within layouts/application
+  Rendered guests/index.html.erb within layouts/application (Duration: 0.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | GC: 0.7ms)
+Completed 200 OK in 30ms (Views: 5.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 1.4ms)
+
+
+Started GET "/reservations" for 127.0.0.1 at 2025-09-11 15:38:36 -0300
+Processing by ReservationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering reservations/index.html.erb within layouts/application
+  [1m[36mReservation Load (0.9ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" /*action='index',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/views/reservations/index.html.erb:4
+  Rendered reservations/index.html.erb within layouts/application (Duration: 3.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | GC: 0.0ms)
+Completed 200 OK in 18ms (Views: 4.2ms | ActiveRecord: 0.9ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/reservations/34" for 127.0.0.1 at 2025-09-11 15:38:37 -0300
+Processing by ReservationsController#show as HTML
+  Parameters: {"id" => "34"}
+  [1m[36mReservation Load (0.5ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."id" = 34 LIMIT 1 /*action='show',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/controllers/reservations_controller.rb:7:in 'ReservationsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering reservations/show.html.erb within layouts/application
+  Rendered reservations/show.html.erb within layouts/application (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | GC: 0.0ms)
+Completed 200 OK in 14ms (Views: 1.7ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 1.0ms)
+
+
+Started GET "/reservations" for 127.0.0.1 at 2025-09-11 15:45:46 -0300
+Processing by ReservationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering reservations/index.html.erb within layouts/application
+  [1m[36mReservation Load (27.1ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" /*action='index',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/views/reservations/index.html.erb:4
+  Rendered reservations/index.html.erb within layouts/application (Duration: 34.3ms | GC: 0.9ms)
+  Rendered layout layouts/application.html.erb (Duration: 36.3ms | GC: 0.9ms)
+Completed 200 OK in 51ms (Views: -9.1ms | ActiveRecord: 46.9ms (1 query, 0 cached) | GC: 0.9ms)
+
+
+Started GET "/rooms" for 127.0.0.1 at 2025-09-11 15:45:50 -0300
+Processing by RoomsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/index.html.erb within layouts/application
+  [1m[36mRoom Load (0.8ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" /*action='index',application='Hotellab3',controller='rooms'*/[0m
+  ↳ app/views/rooms/index.html.erb:14
+  Rendered rooms/index.html.erb within layouts/application (Duration: 41.5ms | GC: 0.4ms)
+  Rendered layout layouts/application.html.erb (Duration: 43.4ms | GC: 0.7ms)
+Completed 200 OK in 61ms (Views: 37.0ms | ActiveRecord: 8.0ms (1 query, 0 cached) | GC: 0.7ms)
+
+
+Started GET "/rooms/1" for 127.0.0.1 at 2025-09-11 15:45:52 -0300
+Processing by RoomsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mRoom Load (0.9ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = 1 LIMIT 1 /*action='show',application='Hotellab3',controller='rooms'*/[0m
+  ↳ app/controllers/rooms_controller.rb:7:in 'RoomsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/show.html.erb within layouts/application
+  Rendered rooms/show.html.erb within layouts/application (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | GC: 0.0ms)
+Completed 200 OK in 13ms (Views: 1.7ms | ActiveRecord: 0.9ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/rooms/1" for 127.0.0.1 at 2025-09-11 15:45:53 -0300
+Processing by RoomsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mRoom Load (0.9ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = 1 LIMIT 1 /*action='show',application='Hotellab3',controller='rooms'*/[0m
+  ↳ app/controllers/rooms_controller.rb:7:in 'RoomsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/show.html.erb within layouts/application
+  Rendered rooms/show.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | GC: 0.0ms)
+Completed 200 OK in 37ms (Views: 3.6ms | ActiveRecord: 0.9ms (1 query, 0 cached) | GC: 0.5ms)
+
+
+Started GET "/rooms/34" for 127.0.0.1 at 2025-09-11 15:45:57 -0300
+Processing by RoomsController#show as HTML
+  Parameters: {"id" => "34"}
+  [1m[36mRoom Load (0.9ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = 34 LIMIT 1 /*action='show',application='Hotellab3',controller='rooms'*/[0m
+  ↳ app/controllers/rooms_controller.rb:7:in 'RoomsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/show.html.erb within layouts/application
+  Rendered rooms/show.html.erb within layouts/application (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | GC: 0.0ms)
+Completed 200 OK in 29ms (Views: 1.9ms | ActiveRecord: 0.9ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/rooms/1" for 127.0.0.1 at 2025-09-11 15:45:58 -0300
+Processing by RoomsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mRoom Load (0.5ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = 1 LIMIT 1 /*action='show',application='Hotellab3',controller='rooms'*/[0m
+  ↳ app/controllers/rooms_controller.rb:7:in 'RoomsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/show.html.erb within layouts/application
+  Rendered rooms/show.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | GC: 0.0ms)
+Completed 200 OK in 13ms (Views: 1.7ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/rooms" for 127.0.0.1 at 2025-09-11 15:46:39 -0300
+Processing by RoomsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/index.html.erb within layouts/application
+  [1m[36mRoom Load (0.4ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" /*action='index',application='Hotellab3',controller='rooms'*/[0m
+  ↳ app/views/rooms/index.html.erb:14
+  Rendered rooms/index.html.erb within layouts/application (Duration: 13.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 15.3ms | GC: 0.0ms)
+Completed 200 OK in 29ms (Views: 10.7ms | ActiveRecord: 5.9ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/rooms/1" for 127.0.0.1 at 2025-09-11 15:46:40 -0300
+Processing by RoomsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mRoom Load (0.5ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = 1 LIMIT 1 /*action='show',application='Hotellab3',controller='rooms'*/[0m
+  ↳ app/controllers/rooms_controller.rb:7:in 'RoomsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/show.html.erb within layouts/application
+  Rendered rooms/show.html.erb within layouts/application (Duration: 0.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | GC: 0.0ms)
+Completed 200 OK in 13ms (Views: 2.0ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/rooms" for 127.0.0.1 at 2025-09-11 15:46:44 -0300
+Processing by RoomsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/index.html.erb within layouts/application
+  [1m[36mRoom Load (0.4ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" /*action='index',application='Hotellab3',controller='rooms'*/[0m
+  ↳ app/views/rooms/index.html.erb:14
+  Rendered rooms/index.html.erb within layouts/application (Duration: 2.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | GC: 0.0ms)
+Completed 200 OK in 13ms (Views: 3.4ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/rooms/34" for 127.0.0.1 at 2025-09-11 15:46:49 -0300
+Processing by RoomsController#show as HTML
+  Parameters: {"id" => "34"}
+  [1m[36mRoom Load (1.0ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = 34 LIMIT 1 /*action='show',application='Hotellab3',controller='rooms'*/[0m
+  ↳ app/controllers/rooms_controller.rb:7:in 'RoomsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/show.html.erb within layouts/application
+  Rendered rooms/show.html.erb within layouts/application (Duration: 0.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | GC: 0.0ms)
+Completed 200 OK in 19ms (Views: 2.7ms | ActiveRecord: 0.9ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/rooms" for 127.0.0.1 at 2025-09-11 15:46:49 -0300
+Processing by RoomsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/index.html.erb within layouts/application
+  [1m[36mRoom Load (1.2ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" /*action='index',application='Hotellab3',controller='rooms'*/[0m
+  ↳ app/views/rooms/index.html.erb:14
+  Rendered rooms/index.html.erb within layouts/application (Duration: 7.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 11.2ms | GC: 0.0ms)
+Completed 200 OK in 44ms (Views: 11.5ms | ActiveRecord: 1.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/rooms/34" for 127.0.0.1 at 2025-09-11 15:46:50 -0300
+Processing by RoomsController#show as HTML
+  Parameters: {"id" => "34"}
+  [1m[36mRoom Load (0.5ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = 34 LIMIT 1 /*action='show',application='Hotellab3',controller='rooms'*/[0m
+  ↳ app/controllers/rooms_controller.rb:7:in 'RoomsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/show.html.erb within layouts/application
+  Rendered rooms/show.html.erb within layouts/application (Duration: 0.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | GC: 0.0ms)
+Completed 200 OK in 11ms (Views: 1.8ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/rooms/1" for 127.0.0.1 at 2025-09-11 15:46:50 -0300
+Processing by RoomsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mRoom Load (0.7ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = 1 LIMIT 1 /*action='show',application='Hotellab3',controller='rooms'*/[0m
+  ↳ app/controllers/rooms_controller.rb:7:in 'RoomsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/show.html.erb within layouts/application
+  Rendered rooms/show.html.erb within layouts/application (Duration: 0.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.4ms | GC: 0.0ms)
+Completed 200 OK in 17ms (Views: 3.1ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/rooms" for 127.0.0.1 at 2025-09-11 15:46:51 -0300
+Processing by RoomsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/index.html.erb within layouts/application
+  [1m[36mRoom Load (0.4ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" /*action='index',application='Hotellab3',controller='rooms'*/[0m
+  ↳ app/views/rooms/index.html.erb:14
+  Rendered rooms/index.html.erb within layouts/application (Duration: 4.1ms | GC: 1.1ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | GC: 1.1ms)
+Completed 200 OK in 18ms (Views: 6.1ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 1.1ms)
+
+
+Started GET "/reservations" for 127.0.0.1 at 2025-09-11 15:49:37 -0300
+Processing by ReservationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering reservations/index.html.erb within layouts/application
+  [1m[36mReservation Load (0.5ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" /*action='index',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/views/reservations/index.html.erb:18
+  Rendered reservations/index.html.erb within layouts/application (Duration: 11.3ms | GC: 0.7ms)
+  Rendered layout layouts/application.html.erb (Duration: 11.7ms | GC: 0.7ms)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 3.6ms (1 query, 0 cached) | GC: 1.2ms)
+
+
+  
+ActionView::Template::Error (undefined method 'guest' for an instance of Reservation)
+Caused by: NoMethodError (undefined method 'guest' for an instance of Reservation)
+
+Information for: ActionView::Template::Error (undefined method 'guest' for an instance of Reservation):
+    18:     <% @reservations.each do |reservation| %>
+    19:       <tr>
+    20:         <td><%= reservation.code %></td>
+    21:         <td><%= reservation.guest.first_name %> <%= reservation.guest.last_name %></td>
+    22:         <td><%= reservation.room.number %></td>
+    23:         <td><%= reservation.check_in %></td>
+    24:         <td><%= reservation.check_out %></td>
+  
+app/views/reservations/index.html.erb:21
+app/views/reservations/index.html.erb:18
+
+Information for cause: NoMethodError (undefined method 'guest' for an instance of Reservation):
+  
+app/views/reservations/index.html.erb:21
+app/views/reservations/index.html.erb:18
+Started GET "/reservations" for 127.0.0.1 at 2025-09-11 15:49:38 -0300
+Processing by ReservationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering reservations/index.html.erb within layouts/application
+  [1m[36mReservation Load (0.4ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" /*action='index',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/views/reservations/index.html.erb:18
+  Rendered reservations/index.html.erb within layouts/application (Duration: 4.8ms | GC: 2.3ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | GC: 2.3ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 2.3ms)
+
+
+  
+ActionView::Template::Error (undefined method 'guest' for an instance of Reservation)
+Caused by: NoMethodError (undefined method 'guest' for an instance of Reservation)
+
+Information for: ActionView::Template::Error (undefined method 'guest' for an instance of Reservation):
+    18:     <% @reservations.each do |reservation| %>
+    19:       <tr>
+    20:         <td><%= reservation.code %></td>
+    21:         <td><%= reservation.guest.first_name %> <%= reservation.guest.last_name %></td>
+    22:         <td><%= reservation.room.number %></td>
+    23:         <td><%= reservation.check_in %></td>
+    24:         <td><%= reservation.check_out %></td>
+  
+app/views/reservations/index.html.erb:21
+app/views/reservations/index.html.erb:18
+
+Information for cause: NoMethodError (undefined method 'guest' for an instance of Reservation):
+  
+app/views/reservations/index.html.erb:21
+app/views/reservations/index.html.erb:18
+Started GET "/reservations" for 127.0.0.1 at 2025-09-11 15:53:12 -0300
+Processing by ReservationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering reservations/index.html.erb within layouts/application
+  [1m[36mReservation Load (0.8ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" /*action='index',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/views/reservations/index.html.erb:18
+  [1m[36mGuest Load (0.6ms)[0m  [1m[34mSELECT "guests".* FROM "guests" WHERE "guests"."id" = 1 LIMIT 1 /*action='index',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/views/reservations/index.html.erb:21
+  [1m[36mRoom Load (0.6ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = 1 LIMIT 1 /*action='index',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/views/reservations/index.html.erb:22
+  [1m[36mCACHE Guest Load (0.0ms)[0m  [1m[34mSELECT "guests".* FROM "guests" WHERE "guests"."id" = 1 LIMIT 1[0m
+  ↳ app/views/reservations/index.html.erb:21
+  [1m[36mCACHE Room Load (0.0ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = 1 LIMIT 1[0m
+  ↳ app/views/reservations/index.html.erb:22
+  Rendered reservations/index.html.erb within layouts/application (Duration: 93.1ms | GC: 12.3ms)
+  Rendered layout layouts/application.html.erb (Duration: 95.6ms | GC: 12.8ms)
+Completed 200 OK in 133ms (Views: 82.6ms | ActiveRecord: 14.8ms (5 queries, 2 cached) | GC: 13.9ms)
+
+
+Started GET "/reservations/1" for 127.0.0.1 at 2025-09-11 15:53:16 -0300
+Processing by ReservationsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mReservation Load (0.7ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."id" = 1 LIMIT 1 /*action='show',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/controllers/reservations_controller.rb:7:in 'ReservationsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering reservations/show.html.erb within layouts/application
+  Rendered reservations/show.html.erb within layouts/application (Duration: 0.8ms | GC: 0.5ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | GC: 0.5ms)
+Completed 200 OK in 19ms (Views: 2.1ms | ActiveRecord: 0.7ms (1 query, 0 cached) | GC: 2.1ms)
+
+
+Started GET "/reservations/1" for 127.0.0.1 at 2025-09-11 15:53:56 -0300
+Processing by ReservationsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mReservation Load (0.4ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."id" = 1 LIMIT 1 /*action='show',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/controllers/reservations_controller.rb:7:in 'ReservationsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering reservations/show.html.erb within layouts/application
+  [1m[36mGuest Load (0.4ms)[0m  [1m[34mSELECT "guests".* FROM "guests" WHERE "guests"."id" = 1 LIMIT 1 /*action='show',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/views/reservations/show.html.erb:4
+  [1m[36mRoom Load (0.4ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = 1 LIMIT 1 /*action='show',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/views/reservations/show.html.erb:5
+  Rendered reservations/show.html.erb within layouts/application (Duration: 24.3ms | GC: 1.2ms)
+  Rendered layout layouts/application.html.erb (Duration: 26.4ms | GC: 1.2ms)
+Completed 200 OK in 63ms (Views: 20.7ms | ActiveRecord: 11.1ms (3 queries, 0 cached) | GC: 11.4ms)
+
+
+Started GET "/reservations/1" for 127.0.0.1 at 2025-09-11 15:54:03 -0300
+Processing by ReservationsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mReservation Load (1.2ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."id" = 1 LIMIT 1 /*action='show',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/controllers/reservations_controller.rb:7:in 'ReservationsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering reservations/show.html.erb within layouts/application
+  [1m[36mGuest Load (0.6ms)[0m  [1m[34mSELECT "guests".* FROM "guests" WHERE "guests"."id" = 1 LIMIT 1 /*action='show',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/views/reservations/show.html.erb:4
+  [1m[36mRoom Load (0.7ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = 1 LIMIT 1 /*action='show',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/views/reservations/show.html.erb:5
+  Rendered reservations/show.html.erb within layouts/application (Duration: 8.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 10.1ms | GC: 0.0ms)
+Completed 200 OK in 31ms (Views: 9.6ms | ActiveRecord: 2.5ms (3 queries, 0 cached) | GC: 1.4ms)
+
+
+Started GET "/reservations/1" for 127.0.0.1 at 2025-09-11 15:54:13 -0300
+Processing by ReservationsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mReservation Load (0.9ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."id" = 1 LIMIT 1 /*action='show',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/controllers/reservations_controller.rb:7:in 'ReservationsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering reservations/show.html.erb within layouts/application
+  [1m[36mGuest Load (0.4ms)[0m  [1m[34mSELECT "guests".* FROM "guests" WHERE "guests"."id" = 1 LIMIT 1 /*action='show',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/views/reservations/show.html.erb:4
+  [1m[36mRoom Load (0.4ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = 1 LIMIT 1 /*action='show',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/views/reservations/show.html.erb:5
+  Rendered reservations/show.html.erb within layouts/application (Duration: 4.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | GC: 0.0ms)
+Completed 200 OK in 21ms (Views: 6.0ms | ActiveRecord: 1.7ms (3 queries, 0 cached) | GC: 1.2ms)
+
+
+Started GET "/reservations/1" for 127.0.0.1 at 2025-09-11 15:54:16 -0300
+Processing by ReservationsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mReservation Load (0.8ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."id" = 1 LIMIT 1 /*action='show',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/controllers/reservations_controller.rb:7:in 'ReservationsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering reservations/show.html.erb within layouts/application
+  [1m[36mGuest Load (0.3ms)[0m  [1m[34mSELECT "guests".* FROM "guests" WHERE "guests"."id" = 1 LIMIT 1 /*action='show',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/views/reservations/show.html.erb:4
+  [1m[36mRoom Load (0.4ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = 1 LIMIT 1 /*action='show',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/views/reservations/show.html.erb:5
+  Rendered reservations/show.html.erb within layouts/application (Duration: 4.7ms | GC: 0.9ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | GC: 0.9ms)
+Completed 200 OK in 16ms (Views: 5.5ms | ActiveRecord: 1.5ms (3 queries, 0 cached) | GC: 0.9ms)
+
+
+Started GET "/reservations/1" for 127.0.0.1 at 2025-09-11 15:54:19 -0300
+Processing by ReservationsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mReservation Load (0.6ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."id" = 1 LIMIT 1 /*action='show',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/controllers/reservations_controller.rb:7:in 'ReservationsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering reservations/show.html.erb within layouts/application
+  [1m[36mGuest Load (0.3ms)[0m  [1m[34mSELECT "guests".* FROM "guests" WHERE "guests"."id" = 1 LIMIT 1 /*action='show',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/views/reservations/show.html.erb:4
+  [1m[36mRoom Load (0.3ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = 1 LIMIT 1 /*action='show',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/views/reservations/show.html.erb:5
+  Rendered reservations/show.html.erb within layouts/application (Duration: 4.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | GC: 0.7ms)
+Completed 200 OK in 17ms (Views: 5.5ms | ActiveRecord: 1.2ms (3 queries, 0 cached) | GC: 0.7ms)
+
+
+Started GET "/reservations/1" for 127.0.0.1 at 2025-09-11 15:54:31 -0300
+Processing by ReservationsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mReservation Load (0.7ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."id" = 1 LIMIT 1 /*action='show',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/controllers/reservations_controller.rb:7:in 'ReservationsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering reservations/show.html.erb within layouts/application
+  [1m[36mGuest Load (0.3ms)[0m  [1m[34mSELECT "guests".* FROM "guests" WHERE "guests"."id" = 1 LIMIT 1 /*action='show',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/views/reservations/show.html.erb:4
+  [1m[36mRoom Load (0.3ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = 1 LIMIT 1 /*action='show',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/views/reservations/show.html.erb:5
+  Rendered reservations/show.html.erb within layouts/application (Duration: 3.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | GC: 0.0ms)
+Completed 200 OK in 15ms (Views: 4.2ms | ActiveRecord: 1.3ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/reservations/1" for 127.0.0.1 at 2025-09-11 15:54:47 -0300
+Processing by ReservationsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mReservation Load (1.4ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."id" = 1 LIMIT 1 /*action='show',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/controllers/reservations_controller.rb:7:in 'ReservationsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering reservations/show.html.erb within layouts/application
+  [1m[36mGuest Load (0.9ms)[0m  [1m[34mSELECT "guests".* FROM "guests" WHERE "guests"."id" = 1 LIMIT 1 /*action='show',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/views/reservations/show.html.erb:4
+  [1m[36mRoom Load (0.9ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = 1 LIMIT 1 /*action='show',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/views/reservations/show.html.erb:5
+  Rendered reservations/show.html.erb within layouts/application (Duration: 10.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 12.9ms | GC: 0.0ms)
+Completed 200 OK in 41ms (Views: 12.1ms | ActiveRecord: 3.1ms (3 queries, 0 cached) | GC: 0.8ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2025-09-11 15:56:07 -0300
+Processing by ServicesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mService Load (0.6ms)[0m  [1m[34mSELECT "services".* FROM "services" /*action='index',application='Hotellab3',controller='services'*/[0m
+  ↳ app/views/services/index.html.erb:13
+  Rendered services/index.html.erb within layouts/application (Duration: 13.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 15.3ms | GC: 0.0ms)
+Completed 200 OK in 32ms (Views: 13.3ms | ActiveRecord: 3.7ms (1 query, 0 cached) | GC: 0.4ms)
+
+
+Started GET "/services/1" for 127.0.0.1 at 2025-09-11 15:56:09 -0300
+Processing by ServicesController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mService Load (0.5ms)[0m  [1m[34mSELECT "services".* FROM "services" WHERE "services"."id" = 1 LIMIT 1 /*action='show',application='Hotellab3',controller='services'*/[0m
+  ↳ app/controllers/services_controller.rb:7:in 'ServicesController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering services/show.html.erb within layouts/application
+  Rendered services/show.html.erb within layouts/application (Duration: 0.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | GC: 0.0ms)
+Completed 200 OK in 13ms (Views: 2.0ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/services/1" for 127.0.0.1 at 2025-09-11 15:56:22 -0300
+Processing by ServicesController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mService Load (1.0ms)[0m  [1m[34mSELECT "services".* FROM "services" WHERE "services"."id" = 1 LIMIT 1 /*action='show',application='Hotellab3',controller='services'*/[0m
+  ↳ app/controllers/services_controller.rb:7:in 'ServicesController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering services/show.html.erb within layouts/application
+  Rendered services/show.html.erb within layouts/application (Duration: 0.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | GC: 0.0ms)
+Completed 200 OK in 28ms (Views: 2.5ms | ActiveRecord: 1.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/services/1" for 127.0.0.1 at 2025-09-11 15:56:25 -0300
+Processing by ServicesController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mService Load (1.1ms)[0m  [1m[34mSELECT "services".* FROM "services" WHERE "services"."id" = 1 LIMIT 1 /*action='show',application='Hotellab3',controller='services'*/[0m
+  ↳ app/controllers/services_controller.rb:7:in 'ServicesController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering services/show.html.erb within layouts/application
+  Rendered services/show.html.erb within layouts/application (Duration: 0.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | GC: 0.0ms)
+Completed 200 OK in 15ms (Views: 2.9ms | ActiveRecord: 1.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/services/34" for 127.0.0.1 at 2025-09-11 15:56:25 -0300
+Processing by ServicesController#show as HTML
+  Parameters: {"id" => "34"}
+  [1m[36mService Load (0.7ms)[0m  [1m[34mSELECT "services".* FROM "services" WHERE "services"."id" = 34 LIMIT 1 /*action='show',application='Hotellab3',controller='services'*/[0m
+  ↳ app/controllers/services_controller.rb:7:in 'ServicesController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering services/show.html.erb within layouts/application
+  Rendered services/show.html.erb within layouts/application (Duration: 0.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | GC: 0.0ms)
+Completed 200 OK in 28ms (Views: 3.4ms | ActiveRecord: 0.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/services/1" for 127.0.0.1 at 2025-09-11 15:56:37 -0300
+Processing by ServicesController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mService Load (0.7ms)[0m  [1m[34mSELECT "services".* FROM "services" WHERE "services"."id" = 1 LIMIT 1 /*action='show',application='Hotellab3',controller='services'*/[0m
+  ↳ app/controllers/services_controller.rb:7:in 'ServicesController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering services/show.html.erb within layouts/application
+  Rendered services/show.html.erb within layouts/application (Duration: 0.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | GC: 0.0ms)
+Completed 200 OK in 14ms (Views: 2.0ms | ActiveRecord: 0.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2025-09-11 15:57:18 -0300
+Processing by ServicesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mService Load (0.4ms)[0m  [1m[34mSELECT "services".* FROM "services" /*action='index',application='Hotellab3',controller='services'*/[0m
+  ↳ app/views/services/index.html.erb:13
+  Rendered services/index.html.erb within layouts/application (Duration: 17.0ms | GC: 0.9ms)
+  Rendered layout layouts/application.html.erb (Duration: 18.9ms | GC: 0.9ms)
+Completed 200 OK in 32ms (Views: 12.7ms | ActiveRecord: 7.4ms (1 query, 0 cached) | GC: 0.9ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2025-09-11 15:57:37 -0300
+Processing by ServicesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mService Load (0.5ms)[0m  [1m[34mSELECT "services".* FROM "services" /*action='index',application='Hotellab3',controller='services'*/[0m
+  ↳ app/views/services/index.html.erb:11
+  Rendered services/index.html.erb within layouts/application (Duration: 14.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 17.5ms | GC: 0.5ms)
+Completed 200 OK in 34ms (Views: 15.8ms | ActiveRecord: 4.6ms (1 query, 0 cached) | GC: 1.0ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2025-09-11 16:02:57 -0300
+Processing by ServicesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mService Load (0.6ms)[0m  [1m[34mSELECT "services".* FROM "services" /*action='index',application='Hotellab3',controller='services'*/[0m
+  ↳ app/views/services/index.html.erb:11
+  Rendered services/index.html.erb within layouts/application (Duration: 9.0ms | GC: 0.0ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 14.6ms | GC: 0.0ms)
+Completed 200 OK in 36ms (Views: 12.4ms | ActiveRecord: 3.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/rooms" for 127.0.0.1 at 2025-09-11 16:02:59 -0300
+Processing by RoomsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/index.html.erb within layouts/application
+  [1m[36mRoom Load (0.7ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" /*action='index',application='Hotellab3',controller='rooms'*/[0m
+  ↳ app/views/rooms/index.html.erb:14
+  Rendered rooms/index.html.erb within layouts/application (Duration: 14.0ms | GC: 0.0ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 15.8ms | GC: 0.0ms)
+Completed 200 OK in 60ms (Views: 12.1ms | ActiveRecord: 4.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-09-11 16:03:01 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/oscarrusher/.rbenv/versions/3.4.5/lib/ruby/gems/3.4.0/gems/railties-8.0.2.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/oscarrusher/.rbenv/versions/3.4.5/lib/ruby/gems/3.4.0/gems/railties-8.0.2.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.9ms | GC: 0.0ms)
+Completed 200 OK in 16ms (Views: 2.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/rooms" for 127.0.0.1 at 2025-09-11 16:03:01 -0300
+Processing by RoomsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/index.html.erb within layouts/application
+  [1m[36mRoom Load (0.9ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" /*action='index',application='Hotellab3',controller='rooms'*/[0m
+  ↳ app/views/rooms/index.html.erb:14
+  Rendered rooms/index.html.erb within layouts/application (Duration: 5.1ms | GC: 0.0ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | GC: 0.0ms)
+Completed 200 OK in 36ms (Views: 7.7ms | ActiveRecord: 0.8ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-09-11 16:03:05 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/oscarrusher/.rbenv/versions/3.4.5/lib/ruby/gems/3.4.0/gems/railties-8.0.2.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/oscarrusher/.rbenv/versions/3.4.5/lib/ruby/gems/3.4.0/gems/railties-8.0.2.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.4ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 1.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/rooms" for 127.0.0.1 at 2025-09-11 16:03:10 -0300
+Processing by RoomsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/index.html.erb within layouts/application
+  [1m[36mRoom Load (0.8ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" /*action='index',application='Hotellab3',controller='rooms'*/[0m
+  ↳ app/views/rooms/index.html.erb:14
+  Rendered rooms/index.html.erb within layouts/application (Duration: 3.8ms | GC: 0.0ms)
+  Rendered shared/_navigation.html.erb (Duration: 11.6ms | GC: 10.6ms)
+  Rendered layout layouts/application.html.erb (Duration: 17.6ms | GC: 10.6ms)
+Completed 200 OK in 29ms (Views: 18.6ms | ActiveRecord: 0.8ms (1 query, 0 cached) | GC: 10.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-09-11 16:03:11 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/oscarrusher/.rbenv/versions/3.4.5/lib/ruby/gems/3.4.0/gems/railties-8.0.2.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/oscarrusher/.rbenv/versions/3.4.5/lib/ruby/gems/3.4.0/gems/railties-8.0.2.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.2ms | GC: 0.0ms)
+Completed 200 OK in 9ms (Views: 0.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-09-11 16:03:11 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/oscarrusher/.rbenv/versions/3.4.5/lib/ruby/gems/3.4.0/gems/railties-8.0.2.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/oscarrusher/.rbenv/versions/3.4.5/lib/ruby/gems/3.4.0/gems/railties-8.0.2.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.4ms | GC: 0.0ms)
+Completed 200 OK in 15ms (Views: 1.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/rooms" for 127.0.0.1 at 2025-09-11 16:03:15 -0300
+Processing by RoomsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/index.html.erb within layouts/application
+  [1m[36mRoom Load (0.7ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" /*action='index',application='Hotellab3',controller='rooms'*/[0m
+  ↳ app/views/rooms/index.html.erb:14
+  Rendered rooms/index.html.erb within layouts/application (Duration: 3.2ms | GC: 0.0ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | GC: 0.0ms)
+Completed 200 OK in 17ms (Views: 5.0ms | ActiveRecord: 0.7ms (1 query, 0 cached) | GC: 1.9ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2025-09-11 16:03:16 -0300
+Processing by ServicesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mService Load (0.6ms)[0m  [1m[34mSELECT "services".* FROM "services" /*action='index',application='Hotellab3',controller='services'*/[0m
+  ↳ app/views/services/index.html.erb:11
+  Rendered services/index.html.erb within layouts/application (Duration: 4.4ms | GC: 0.0ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 8.3ms | GC: 0.0ms)
+Completed 200 OK in 25ms (Views: 8.4ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/reservations" for 127.0.0.1 at 2025-09-11 16:03:17 -0300
+Processing by ReservationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering reservations/index.html.erb within layouts/application
+  [1m[36mReservation Load (0.6ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" /*action='index',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/views/reservations/index.html.erb:18
+  [1m[36mGuest Load (0.4ms)[0m  [1m[34mSELECT "guests".* FROM "guests" WHERE "guests"."id" = 1 LIMIT 1 /*action='index',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/views/reservations/index.html.erb:21
+  [1m[36mRoom Load (0.5ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = 1 LIMIT 1 /*action='index',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/views/reservations/index.html.erb:22
+  [1m[36mCACHE Guest Load (0.0ms)[0m  [1m[34mSELECT "guests".* FROM "guests" WHERE "guests"."id" = 1 LIMIT 1[0m
+  ↳ app/views/reservations/index.html.erb:21
+  [1m[36mCACHE Room Load (0.0ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = 1 LIMIT 1[0m
+  ↳ app/views/reservations/index.html.erb:22
+  Rendered reservations/index.html.erb within layouts/application (Duration: 27.3ms | GC: 2.9ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 28.6ms | GC: 2.9ms)
+Completed 200 OK in 41ms (Views: 22.8ms | ActiveRecord: 6.4ms (5 queries, 2 cached) | GC: 2.9ms)
+
+
+Started GET "/guests" for 127.0.0.1 at 2025-09-11 16:03:18 -0300
+Processing by GuestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering guests/index.html.erb within layouts/application
+  [1m[36mGuest Load (0.7ms)[0m  [1m[34mSELECT "guests".* FROM "guests" /*action='index',application='Hotellab3',controller='guests'*/[0m
+  ↳ app/views/guests/index.html.erb:15
+  Rendered guests/index.html.erb within layouts/application (Duration: 4.5ms | GC: 0.0ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | GC: 0.0ms)
+Completed 200 OK in 34ms (Views: 6.8ms | ActiveRecord: 0.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/rooms" for 127.0.0.1 at 2025-09-11 16:03:19 -0300
+Processing by RoomsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/index.html.erb within layouts/application
+  [1m[36mRoom Load (0.6ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" /*action='index',application='Hotellab3',controller='rooms'*/[0m
+  ↳ app/views/rooms/index.html.erb:14
+  Rendered rooms/index.html.erb within layouts/application (Duration: 3.2ms | GC: 0.0ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | GC: 0.0ms)
+Completed 200 OK in 16ms (Views: 5.0ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/guests" for 127.0.0.1 at 2025-09-11 16:03:20 -0300
+Processing by GuestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering guests/index.html.erb within layouts/application
+  [1m[36mGuest Load (0.8ms)[0m  [1m[34mSELECT "guests".* FROM "guests" /*action='index',application='Hotellab3',controller='guests'*/[0m
+  ↳ app/views/guests/index.html.erb:15
+  Rendered guests/index.html.erb within layouts/application (Duration: 4.6ms | GC: 0.0ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | GC: 0.0ms)
+Completed 200 OK in 28ms (Views: 8.0ms | ActiveRecord: 0.8ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2025-09-11 16:03:24 -0300
+Processing by ServicesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mService Load (0.4ms)[0m  [1m[34mSELECT "services".* FROM "services" /*action='index',application='Hotellab3',controller='services'*/[0m
+  ↳ app/views/services/index.html.erb:11
+  Rendered services/index.html.erb within layouts/application (Duration: 1.9ms | GC: 0.0ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 3.3ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/reservations" for 127.0.0.1 at 2025-09-11 16:09:30 -0300
+Processing by ReservationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering reservations/index.html.erb within layouts/application
+  [1m[36mReservation Load (19.9ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" /*action='index',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/views/reservations/index.html.erb:18
+  [1m[36mGuest Load (0.9ms)[0m  [1m[34mSELECT "guests".* FROM "guests" WHERE "guests"."id" = 1 LIMIT 1 /*action='index',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/views/reservations/index.html.erb:21
+  [1m[36mRoom Load (0.6ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = 1 LIMIT 1 /*action='index',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/views/reservations/index.html.erb:22
+  [1m[36mCACHE Guest Load (0.0ms)[0m  [1m[34mSELECT "guests".* FROM "guests" WHERE "guests"."id" = 1 LIMIT 1[0m
+  ↳ app/views/reservations/index.html.erb:21
+  [1m[36mCACHE Room Load (0.0ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = 1 LIMIT 1[0m
+  ↳ app/views/reservations/index.html.erb:22
+  Rendered reservations/index.html.erb within layouts/application (Duration: 33.2ms | GC: 0.6ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 35.9ms | GC: 1.2ms)
+Completed 200 OK in 52ms (Views: 4.1ms | ActiveRecord: 32.4ms (5 queries, 2 cached) | GC: 1.2ms)
+
+
+Started GET "/reservations/34" for 127.0.0.1 at 2025-09-11 16:09:31 -0300
+Processing by ReservationsController#show as HTML
+  Parameters: {"id" => "34"}
+  [1m[36mReservation Load (0.5ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."id" = 34 LIMIT 1 /*action='show',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/controllers/reservations_controller.rb:7:in 'ReservationsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering reservations/show.html.erb within layouts/application
+  [1m[36mGuest Load (0.4ms)[0m  [1m[34mSELECT "guests".* FROM "guests" WHERE "guests"."id" = 1 LIMIT 1 /*action='show',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/views/reservations/show.html.erb:4
+  [1m[36mRoom Load (0.3ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = 1 LIMIT 1 /*action='show',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/views/reservations/show.html.erb:5
+  Rendered reservations/show.html.erb within layouts/application (Duration: 3.9ms | GC: 0.0ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | GC: 0.0ms)
+Completed 200 OK in 16ms (Views: 4.8ms | ActiveRecord: 1.1ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/reservations/1" for 127.0.0.1 at 2025-09-11 16:09:31 -0300
+Processing by ReservationsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mReservation Load (1.4ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."id" = 1 LIMIT 1 /*action='show',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/controllers/reservations_controller.rb:7:in 'ReservationsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering reservations/show.html.erb within layouts/application
+  [1m[36mGuest Load (1.7ms)[0m  [1m[34mSELECT "guests".* FROM "guests" WHERE "guests"."id" = 1 LIMIT 1 /*action='show',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/views/reservations/show.html.erb:4
+  [1m[36mRoom Load (0.9ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = 1 LIMIT 1 /*action='show',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/views/reservations/show.html.erb:5
+  Rendered reservations/show.html.erb within layouts/application (Duration: 13.4ms | GC: 0.3ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 16.9ms | GC: 0.3ms)
+Completed 200 OK in 63ms (Views: 15.5ms | ActiveRecord: 3.9ms (3 queries, 0 cached) | GC: 0.3ms)
+
+
+Started GET "/reservations" for 127.0.0.1 at 2025-09-11 16:09:33 -0300
+Processing by ReservationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering reservations/index.html.erb within layouts/application
+  [1m[36mReservation Load (0.5ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" /*action='index',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/views/reservations/index.html.erb:18
+  [1m[36mGuest Load (0.3ms)[0m  [1m[34mSELECT "guests".* FROM "guests" WHERE "guests"."id" = 1 LIMIT 1 /*action='index',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/views/reservations/index.html.erb:21
+  [1m[36mRoom Load (0.3ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = 1 LIMIT 1 /*action='index',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/views/reservations/index.html.erb:22
+  [1m[36mCACHE Guest Load (0.0ms)[0m  [1m[34mSELECT "guests".* FROM "guests" WHERE "guests"."id" = 1 LIMIT 1[0m
+  ↳ app/views/reservations/index.html.erb:21
+  [1m[36mCACHE Room Load (0.0ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = 1 LIMIT 1[0m
+  ↳ app/views/reservations/index.html.erb:22
+  Rendered reservations/index.html.erb within layouts/application (Duration: 8.0ms | GC: 0.0ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 9.3ms | GC: 0.0ms)
+Completed 200 OK in 18ms (Views: 8.6ms | ActiveRecord: 1.1ms (5 queries, 2 cached) | GC: 0.0ms)
+
+
+Started GET "/reservations" for 127.0.0.1 at 2025-09-11 16:09:33 -0300
+Processing by ReservationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering reservations/index.html.erb within layouts/application
+  [1m[36mReservation Load (0.5ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" /*action='index',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/views/reservations/index.html.erb:18
+  [1m[36mGuest Load (0.5ms)[0m  [1m[34mSELECT "guests".* FROM "guests" WHERE "guests"."id" = 1 LIMIT 1 /*action='index',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/views/reservations/index.html.erb:21
+  [1m[36mRoom Load (0.4ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = 1 LIMIT 1 /*action='index',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/views/reservations/index.html.erb:22
+  [1m[36mCACHE Guest Load (0.0ms)[0m  [1m[34mSELECT "guests".* FROM "guests" WHERE "guests"."id" = 1 LIMIT 1[0m
+  ↳ app/views/reservations/index.html.erb:21
+  [1m[36mCACHE Room Load (0.0ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = 1 LIMIT 1[0m
+  ↳ app/views/reservations/index.html.erb:22
+  Rendered reservations/index.html.erb within layouts/application (Duration: 9.6ms | GC: 0.0ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | GC: 0.0ms)
+Completed 200 OK in 23ms (Views: 10.4ms | ActiveRecord: 1.4ms (5 queries, 2 cached) | GC: 0.0ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2025-09-11 16:09:34 -0300
+Processing by ServicesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mService Load (0.4ms)[0m  [1m[34mSELECT "services".* FROM "services" /*action='index',application='Hotellab3',controller='services'*/[0m
+  ↳ app/views/services/index.html.erb:11
+  Rendered services/index.html.erb within layouts/application (Duration: 1.7ms | GC: 0.0ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | GC: 0.0ms)
+Completed 200 OK in 10ms (Views: 2.8ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/services/1" for 127.0.0.1 at 2025-09-11 16:09:35 -0300
+Processing by ServicesController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mService Load (0.5ms)[0m  [1m[34mSELECT "services".* FROM "services" WHERE "services"."id" = 1 LIMIT 1 /*action='show',application='Hotellab3',controller='services'*/[0m
+  ↳ app/controllers/services_controller.rb:7:in 'ServicesController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering services/show.html.erb within layouts/application
+  Rendered services/show.html.erb within layouts/application (Duration: 0.9ms | GC: 0.0ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.4ms | GC: 0.0ms)
+Completed 200 OK in 15ms (Views: 2.8ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/rooms" for 127.0.0.1 at 2025-09-11 16:09:36 -0300
+Processing by RoomsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/index.html.erb within layouts/application
+  [1m[36mRoom Load (0.4ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" /*action='index',application='Hotellab3',controller='rooms'*/[0m
+  ↳ app/views/rooms/index.html.erb:14
+  Rendered rooms/index.html.erb within layouts/application (Duration: 2.2ms | GC: 0.0ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | GC: 0.0ms)
+Completed 200 OK in 14ms (Views: 3.6ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-09-12 18:11:10 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Hotellab3'*/[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/oscarrusher/.rbenv/versions/3.4.5/lib/ruby/gems/3.4.0/gems/railties-8.0.2.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/oscarrusher/.rbenv/versions/3.4.5/lib/ruby/gems/3.4.0/gems/railties-8.0.2.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.6ms | GC: 0.0ms)
+Completed 200 OK in 32ms (Views: 4.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 1.0ms)
+
+
+Started GET "/rooms" for 127.0.0.1 at 2025-09-12 18:11:13 -0300
+Processing by RoomsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/index.html.erb within layouts/application
+  [1m[36mRoom Load (8.9ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" /*action='index',application='Hotellab3',controller='rooms'*/[0m
+  ↳ app/views/rooms/index.html.erb:14
+  Rendered rooms/index.html.erb within layouts/application (Duration: 35.0ms | GC: 0.0ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 56.6ms | GC: 0.0ms)
+Completed 200 OK in 90ms (Views: 32.4ms | ActiveRecord: 25.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/assets/application-802a3d60.css" for 127.0.0.1 at 2025-09-12 18:11:13 -0300
+Started GET "/assets/application-eddaa668.js" for 127.0.0.1 at 2025-09-12 18:11:13 -0300
+Started GET "/reservations" for 127.0.0.1 at 2025-09-12 18:11:15 -0300
+Processing by ReservationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering reservations/index.html.erb within layouts/application
+  [1m[36mReservation Load (1.3ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" /*action='index',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/views/reservations/index.html.erb:18
+  [1m[36mGuest Load (1.2ms)[0m  [1m[34mSELECT "guests".* FROM "guests" WHERE "guests"."id" = 1 LIMIT 1 /*action='index',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/views/reservations/index.html.erb:21
+  [1m[36mRoom Load (0.4ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = 1 LIMIT 1 /*action='index',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/views/reservations/index.html.erb:22
+  [1m[36mCACHE Guest Load (0.0ms)[0m  [1m[34mSELECT "guests".* FROM "guests" WHERE "guests"."id" = 1 LIMIT 1[0m
+  ↳ app/views/reservations/index.html.erb:21
+  [1m[36mCACHE Room Load (0.0ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = 1 LIMIT 1[0m
+  ↳ app/views/reservations/index.html.erb:22
+  Rendered reservations/index.html.erb within layouts/application (Duration: 37.4ms | GC: 0.0ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 48.5ms | GC: 0.0ms)
+Completed 200 OK in 63ms (Views: 42.4ms | ActiveRecord: 6.6ms (5 queries, 2 cached) | GC: 0.0ms)
+
+
+Started GET "/rooms/1" for 127.0.0.1 at 2025-09-12 18:11:18 -0300
+Processing by RoomsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mRoom Load (0.5ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = 1 LIMIT 1 /*action='show',application='Hotellab3',controller='rooms'*/[0m
+  ↳ app/controllers/rooms_controller.rb:7:in 'RoomsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/show.html.erb within layouts/application
+  Rendered rooms/show.html.erb within layouts/application (Duration: 2.4ms | GC: 0.0ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | GC: 0.0ms)
+Completed 200 OK in 16ms (Views: 6.1ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-09-12 18:11:19 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/oscarrusher/.rbenv/versions/3.4.5/lib/ruby/gems/3.4.0/gems/railties-8.0.2.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/oscarrusher/.rbenv/versions/3.4.5/lib/ruby/gems/3.4.0/gems/railties-8.0.2.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.2ms | GC: 0.0ms)
+Completed 200 OK in 7ms (Views: 0.5ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/rooms" for 127.0.0.1 at 2025-09-12 18:11:23 -0300
+Processing by RoomsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/index.html.erb within layouts/application
+  [1m[36mRoom Load (0.3ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" /*action='index',application='Hotellab3',controller='rooms'*/[0m
+  ↳ app/views/rooms/index.html.erb:14
+  Rendered rooms/index.html.erb within layouts/application (Duration: 1.9ms | GC: 0.0ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | GC: 0.0ms)
+Completed 200 OK in 13ms (Views: 6.1ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/rooms/1" for 127.0.0.1 at 2025-09-12 18:11:24 -0300
+Processing by RoomsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mRoom Load (0.4ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = 1 LIMIT 1 /*action='show',application='Hotellab3',controller='rooms'*/[0m
+  ↳ app/controllers/rooms_controller.rb:7:in 'RoomsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/show.html.erb within layouts/application
+  Rendered rooms/show.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | GC: 0.0ms)
+Completed 200 OK in 9ms (Views: 1.8ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/rooms" for 127.0.0.1 at 2025-09-12 18:11:25 -0300
+Processing by RoomsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/index.html.erb within layouts/application
+  [1m[36mRoom Load (0.4ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" /*action='index',application='Hotellab3',controller='rooms'*/[0m
+  ↳ app/views/rooms/index.html.erb:14
+  Rendered rooms/index.html.erb within layouts/application (Duration: 2.0ms | GC: 0.0ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | GC: 0.0ms)
+Completed 200 OK in 11ms (Views: 4.7ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/guests" for 127.0.0.1 at 2025-09-12 18:11:27 -0300
+Processing by GuestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering guests/index.html.erb within layouts/application
+  [1m[36mGuest Load (0.4ms)[0m  [1m[34mSELECT "guests".* FROM "guests" /*action='index',application='Hotellab3',controller='guests'*/[0m
+  ↳ app/views/guests/index.html.erb:15
+  Rendered guests/index.html.erb within layouts/application (Duration: 2.2ms | GC: 0.0ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 3.6ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/reservations" for 127.0.0.1 at 2025-09-12 18:11:28 -0300
+Processing by ReservationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering reservations/index.html.erb within layouts/application
+  [1m[36mReservation Load (0.3ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" /*action='index',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/views/reservations/index.html.erb:18
+  [1m[36mGuest Load (0.4ms)[0m  [1m[34mSELECT "guests".* FROM "guests" WHERE "guests"."id" = 1 LIMIT 1 /*action='index',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/views/reservations/index.html.erb:21
+  [1m[36mRoom Load (1.3ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = 1 LIMIT 1 /*action='index',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/views/reservations/index.html.erb:22
+  [1m[36mCACHE Guest Load (0.0ms)[0m  [1m[34mSELECT "guests".* FROM "guests" WHERE "guests"."id" = 1 LIMIT 1[0m
+  ↳ app/views/reservations/index.html.erb:21
+  [1m[36mCACHE Room Load (0.0ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = 1 LIMIT 1[0m
+  ↳ app/views/reservations/index.html.erb:22
+  Rendered reservations/index.html.erb within layouts/application (Duration: 11.0ms | GC: 0.0ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 12.1ms | GC: 0.0ms)
+Completed 200 OK in 19ms (Views: 10.7ms | ActiveRecord: 1.8ms (5 queries, 2 cached) | GC: 0.0ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2025-09-12 18:11:30 -0300
+Processing by ServicesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mService Load (1.4ms)[0m  [1m[34mSELECT "services".* FROM "services" /*action='index',application='Hotellab3',controller='services'*/[0m
+  ↳ app/views/services/index.html.erb:13
+  Rendered services/index.html.erb within layouts/application (Duration: 12.0ms | GC: 0.0ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 13.5ms | GC: 0.0ms)
+Completed 200 OK in 24ms (Views: 8.7ms | ActiveRecord: 5.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2025-09-12 18:12:37 -0300
+Processing by ServicesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mService Load (0.4ms)[0m  [1m[34mSELECT "services".* FROM "services" /*action='index',application='Hotellab3',controller='services'*/[0m
+  ↳ app/views/services/index.html.erb:13
+  Rendered services/index.html.erb within layouts/application (Duration: 11.4ms | GC: 0.0ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | GC: 0.0ms)
+Completed 200 OK in 22ms (Views: 9.2ms | ActiveRecord: 4.9ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/rooms" for 127.0.0.1 at 2025-09-12 18:12:42 -0300
+Processing by RoomsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/index.html.erb within layouts/application
+  [1m[36mRoom Load (1.0ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" /*action='index',application='Hotellab3',controller='rooms'*/[0m
+  ↳ app/views/rooms/index.html.erb:14
+  Rendered rooms/index.html.erb within layouts/application (Duration: 32.8ms | GC: 22.4ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 36.0ms | GC: 22.4ms)
+Completed 200 OK in 44ms (Views: 34.1ms | ActiveRecord: 2.9ms (1 query, 0 cached) | GC: 22.4ms)
+
+
+Started GET "/guests" for 127.0.0.1 at 2025-09-12 18:12:42 -0300
+Processing by GuestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering guests/index.html.erb within layouts/application
+  [1m[36mGuest Load (0.5ms)[0m  [1m[34mSELECT "guests".* FROM "guests" /*action='index',application='Hotellab3',controller='guests'*/[0m
+  ↳ app/views/guests/index.html.erb:15
+  Rendered guests/index.html.erb within layouts/application (Duration: 9.1ms | GC: 0.7ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 10.5ms | GC: 0.7ms)
+Completed 200 OK in 21ms (Views: 9.7ms | ActiveRecord: 2.4ms (1 query, 0 cached) | GC: 1.5ms)
+
+
+Started GET "/reservations" for 127.0.0.1 at 2025-09-12 18:12:43 -0300
+Processing by ReservationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering reservations/index.html.erb within layouts/application
+  [1m[36mReservation Load (0.5ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" /*action='index',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/views/reservations/index.html.erb:18
+  [1m[36mGuest Load (0.3ms)[0m  [1m[34mSELECT "guests".* FROM "guests" WHERE "guests"."id" = 1 LIMIT 1 /*action='index',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/views/reservations/index.html.erb:21
+  [1m[36mRoom Load (0.3ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = 1 LIMIT 1 /*action='index',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/views/reservations/index.html.erb:22
+  [1m[36mCACHE Guest Load (0.0ms)[0m  [1m[34mSELECT "guests".* FROM "guests" WHERE "guests"."id" = 1 LIMIT 1[0m
+  ↳ app/views/reservations/index.html.erb:21
+  [1m[36mCACHE Room Load (0.1ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = 1 LIMIT 1[0m
+  ↳ app/views/reservations/index.html.erb:22
+  Rendered reservations/index.html.erb within layouts/application (Duration: 23.4ms | GC: 1.6ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 24.7ms | GC: 1.6ms)
+Completed 200 OK in 33ms (Views: 20.8ms | ActiveRecord: 4.4ms (5 queries, 2 cached) | GC: 2.1ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2025-09-12 18:12:45 -0300
+Processing by ServicesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mService Load (0.3ms)[0m  [1m[34mSELECT "services".* FROM "services" /*action='index',application='Hotellab3',controller='services'*/[0m
+  ↳ app/views/services/index.html.erb:13
+  Rendered services/index.html.erb within layouts/application (Duration: 1.9ms | GC: 0.0ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | GC: 0.0ms)
+Completed 200 OK in 11ms (Views: 4.2ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2025-09-12 18:14:53 -0300
+Processing by ServicesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mService Load (0.5ms)[0m  [1m[34mSELECT "services".* FROM "services" /*action='index',application='Hotellab3',controller='services'*/[0m
+  ↳ app/views/services/index.html.erb:13
+  Rendered services/index.html.erb within layouts/application (Duration: 12.6ms | GC: 0.0ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 15.0ms | GC: 0.3ms)
+Completed 200 OK in 24ms (Views: 10.0ms | ActiveRecord: 5.9ms (1 query, 0 cached) | GC: 0.6ms)
+
+
+Started GET "/reservations" for 127.0.0.1 at 2025-09-12 18:14:56 -0300
+Processing by ReservationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering reservations/index.html.erb within layouts/application
+  [1m[36mReservation Load (0.4ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" /*action='index',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/views/reservations/index.html.erb:18
+  [1m[36mGuest Load (1.0ms)[0m  [1m[34mSELECT "guests".* FROM "guests" WHERE "guests"."id" = 1 LIMIT 1 /*action='index',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/views/reservations/index.html.erb:21
+  [1m[36mRoom Load (0.2ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = 1 LIMIT 1 /*action='index',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/views/reservations/index.html.erb:22
+  [1m[36mCACHE Guest Load (0.0ms)[0m  [1m[34mSELECT "guests".* FROM "guests" WHERE "guests"."id" = 1 LIMIT 1[0m
+  ↳ app/views/reservations/index.html.erb:21
+  [1m[36mCACHE Room Load (0.6ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = 1 LIMIT 1[0m
+  ↳ app/views/reservations/index.html.erb:22
+  Rendered reservations/index.html.erb within layouts/application (Duration: 32.4ms | GC: 0.6ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 34.8ms | GC: 0.6ms)
+Completed 200 OK in 47ms (Views: 27.9ms | ActiveRecord: 7.5ms (5 queries, 2 cached) | GC: 0.6ms)
+
+
+Started GET "/guests" for 127.0.0.1 at 2025-09-12 18:14:56 -0300
+Processing by GuestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering guests/index.html.erb within layouts/application
+  [1m[36mGuest Load (0.4ms)[0m  [1m[34mSELECT "guests".* FROM "guests" /*action='index',application='Hotellab3',controller='guests'*/[0m
+  ↳ app/views/guests/index.html.erb:15
+  Rendered guests/index.html.erb within layouts/application (Duration: 2.4ms | GC: 0.0ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 4.6ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.9ms)
+
+
+Started GET "/rooms" for 127.0.0.1 at 2025-09-12 18:14:56 -0300
+Processing by RoomsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/index.html.erb within layouts/application
+  [1m[36mRoom Load (0.3ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" /*action='index',application='Hotellab3',controller='rooms'*/[0m
+  ↳ app/views/rooms/index.html.erb:14
+  Rendered rooms/index.html.erb within layouts/application (Duration: 5.2ms | GC: 2.6ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | GC: 3.1ms)
+Completed 200 OK in 18ms (Views: 8.8ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 4.2ms)
+
+
+Started GET "/rooms" for 127.0.0.1 at 2025-09-12 18:14:58 -0300
+Processing by RoomsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/index.html.erb within layouts/application
+  [1m[36mRoom Load (0.4ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" /*action='index',application='Hotellab3',controller='rooms'*/[0m
+  ↳ app/views/rooms/index.html.erb:14
+  Rendered rooms/index.html.erb within layouts/application (Duration: 2.6ms | GC: 0.8ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | GC: 1.6ms)
+Completed 200 OK in 15ms (Views: 4.5ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 5.0ms)
+
+
+Started GET "/guests" for 127.0.0.1 at 2025-09-12 18:14:59 -0300
+Processing by GuestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering guests/index.html.erb within layouts/application
+  [1m[36mGuest Load (0.4ms)[0m  [1m[34mSELECT "guests".* FROM "guests" /*action='index',application='Hotellab3',controller='guests'*/[0m
+  ↳ app/views/guests/index.html.erb:15
+  Rendered guests/index.html.erb within layouts/application (Duration: 4.2ms | GC: 0.9ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | GC: 1.4ms)
+Completed 200 OK in 15ms (Views: 6.8ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 2.9ms)
+
+
+Started GET "/reservations" for 127.0.0.1 at 2025-09-12 18:15:00 -0300
+Processing by ReservationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering reservations/index.html.erb within layouts/application
+  [1m[36mReservation Load (1.0ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" /*action='index',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/views/reservations/index.html.erb:18
+  [1m[36mGuest Load (0.8ms)[0m  [1m[34mSELECT "guests".* FROM "guests" WHERE "guests"."id" = 1 LIMIT 1 /*action='index',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/views/reservations/index.html.erb:21
+  [1m[36mRoom Load (0.3ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = 1 LIMIT 1 /*action='index',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/views/reservations/index.html.erb:22
+  [1m[36mCACHE Guest Load (0.0ms)[0m  [1m[34mSELECT "guests".* FROM "guests" WHERE "guests"."id" = 1 LIMIT 1[0m
+  ↳ app/views/reservations/index.html.erb:21
+  [1m[36mCACHE Room Load (0.0ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = 1 LIMIT 1[0m
+  ↳ app/views/reservations/index.html.erb:22
+  Rendered reservations/index.html.erb within layouts/application (Duration: 13.3ms | GC: 4.8ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 14.4ms | GC: 4.9ms)
+Completed 200 OK in 21ms (Views: 12.7ms | ActiveRecord: 2.1ms (5 queries, 2 cached) | GC: 5.4ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2025-09-12 18:15:01 -0300
+Processing by ServicesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mService Load (0.3ms)[0m  [1m[34mSELECT "services".* FROM "services" /*action='index',application='Hotellab3',controller='services'*/[0m
+  ↳ app/views/services/index.html.erb:13
+  Rendered services/index.html.erb within layouts/application (Duration: 3.1ms | GC: 1.1ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | GC: 1.4ms)
+Completed 200 OK in 14ms (Views: 5.2ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 2.0ms)
+
+
+Started GET "/rooms" for 127.0.0.1 at 2025-09-12 18:15:14 -0300
+Processing by RoomsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/index.html.erb within layouts/application
+  [1m[36mRoom Load (0.3ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" /*action='index',application='Hotellab3',controller='rooms'*/[0m
+  ↳ app/views/rooms/index.html.erb:14
+  Rendered rooms/index.html.erb within layouts/application (Duration: 3.0ms | GC: 1.2ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | GC: 1.8ms)
+Completed 200 OK in 16ms (Views: 5.4ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 3.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-09-12 18:15:14 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/oscarrusher/.rbenv/versions/3.4.5/lib/ruby/gems/3.4.0/gems/railties-8.0.2.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/oscarrusher/.rbenv/versions/3.4.5/lib/ruby/gems/3.4.0/gems/railties-8.0.2.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.5ms | GC: 0.0ms)
+Completed 200 OK in 8ms (Views: 1.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-09-12 18:15:14 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/oscarrusher/.rbenv/versions/3.4.5/lib/ruby/gems/3.4.0/gems/railties-8.0.2.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/oscarrusher/.rbenv/versions/3.4.5/lib/ruby/gems/3.4.0/gems/railties-8.0.2.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.2ms | GC: 0.0ms)
+Completed 200 OK in 7ms (Views: 0.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/rooms" for 127.0.0.1 at 2025-09-12 18:17:12 -0300
+Processing by RoomsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/index.html.erb within layouts/application
+  [1m[36mRoom Load (0.3ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" /*action='index',application='Hotellab3',controller='rooms'*/[0m
+  ↳ app/views/rooms/index.html.erb:14
+  Rendered rooms/index.html.erb within layouts/application (Duration: 6.8ms | GC: 0.0ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 9.9ms | GC: 0.4ms)
+Completed 200 OK in 24ms (Views: 8.7ms | ActiveRecord: 2.2ms (1 query, 0 cached) | GC: 1.0ms)
+
+
+Started GET "/shared" for 127.0.0.1 at 2025-09-12 18:17:13 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/shared"):
+  
+Started GET "/favicon.ico" for 127.0.0.1 at 2025-09-12 18:17:13 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/rooms" for 127.0.0.1 at 2025-09-12 18:17:21 -0300
+Processing by RoomsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/index.html.erb within layouts/application
+  [1m[36mRoom Load (0.4ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" /*action='index',application='Hotellab3',controller='rooms'*/[0m
+  ↳ app/views/rooms/index.html.erb:14
+  Rendered rooms/index.html.erb within layouts/application (Duration: 2.9ms | GC: 0.0ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | GC: 0.0ms)
+Completed 200 OK in 16ms (Views: 9.0ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/rooms" for 127.0.0.1 at 2025-09-12 18:17:23 -0300
+Processing by RoomsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/index.html.erb within layouts/application
+  [1m[36mRoom Load (0.3ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" /*action='index',application='Hotellab3',controller='rooms'*/[0m
+  ↳ app/views/rooms/index.html.erb:14
+  Rendered rooms/index.html.erb within layouts/application (Duration: 1.9ms | GC: 0.0ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | GC: 0.0ms)
+Completed 200 OK in 10ms (Views: 3.1ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/guests" for 127.0.0.1 at 2025-09-12 18:17:23 -0300
+Processing by GuestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering guests/index.html.erb within layouts/application
+  [1m[36mGuest Load (0.3ms)[0m  [1m[34mSELECT "guests".* FROM "guests" /*action='index',application='Hotellab3',controller='guests'*/[0m
+  ↳ app/views/guests/index.html.erb:15
+  Rendered guests/index.html.erb within layouts/application (Duration: 12.0ms | GC: 0.0ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 13.5ms | GC: 0.0ms)
+Completed 200 OK in 22ms (Views: 8.4ms | ActiveRecord: 5.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/reservations" for 127.0.0.1 at 2025-09-12 18:17:23 -0300
+Processing by ReservationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering reservations/index.html.erb within layouts/application
+  [1m[36mReservation Load (0.4ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" /*action='index',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/views/reservations/index.html.erb:18
+  [1m[36mGuest Load (0.3ms)[0m  [1m[34mSELECT "guests".* FROM "guests" WHERE "guests"."id" = 1 LIMIT 1 /*action='index',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/views/reservations/index.html.erb:21
+  [1m[36mRoom Load (1.8ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = 1 LIMIT 1 /*action='index',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/views/reservations/index.html.erb:22
+  [1m[36mCACHE Guest Load (0.0ms)[0m  [1m[34mSELECT "guests".* FROM "guests" WHERE "guests"."id" = 1 LIMIT 1[0m
+  ↳ app/views/reservations/index.html.erb:21
+  [1m[36mCACHE Room Load (0.0ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = 1 LIMIT 1[0m
+  ↳ app/views/reservations/index.html.erb:22
+  Rendered reservations/index.html.erb within layouts/application (Duration: 20.2ms | GC: 0.0ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 21.8ms | GC: 0.0ms)
+Completed 200 OK in 38ms (Views: 18.5ms | ActiveRecord: 4.8ms (5 queries, 2 cached) | GC: 0.0ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2025-09-12 18:17:26 -0300
+Processing by ServicesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mService Load (0.3ms)[0m  [1m[34mSELECT "services".* FROM "services" /*action='index',application='Hotellab3',controller='services'*/[0m
+  ↳ app/views/services/index.html.erb:13
+  Rendered services/index.html.erb within layouts/application (Duration: 6.1ms | GC: 0.0ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | GC: 0.0ms)
+Completed 200 OK in 19ms (Views: 6.2ms | ActiveRecord: 2.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/services/1" for 127.0.0.1 at 2025-09-12 18:17:28 -0300
+Processing by ServicesController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mService Load (11.7ms)[0m  [1m[34mSELECT "services".* FROM "services" WHERE "services"."id" = 1 LIMIT 1 /*action='show',application='Hotellab3',controller='services'*/[0m
+  ↳ app/controllers/services_controller.rb:7:in 'ServicesController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering services/show.html.erb within layouts/application
+  Rendered services/show.html.erb within layouts/application (Duration: 0.6ms | GC: 0.0ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | GC: 0.0ms)
+Completed 200 OK in 23ms (Views: 2.1ms | ActiveRecord: 11.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2025-09-12 18:17:29 -0300
+Processing by ServicesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mService Load (0.5ms)[0m  [1m[34mSELECT "services".* FROM "services" /*action='index',application='Hotellab3',controller='services'*/[0m
+  ↳ app/views/services/index.html.erb:13
+  Rendered services/index.html.erb within layouts/application (Duration: 3.4ms | GC: 0.0ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | GC: 0.0ms)
+Completed 200 OK in 14ms (Views: 7.6ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2025-09-12 18:17:31 -0300
+Processing by ServicesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mService Load (0.4ms)[0m  [1m[34mSELECT "services".* FROM "services" /*action='index',application='Hotellab3',controller='services'*/[0m
+  ↳ app/views/services/index.html.erb:13
+  Rendered services/index.html.erb within layouts/application (Duration: 3.0ms | GC: 0.9ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | GC: 0.9ms)
+Completed 200 OK in 13ms (Views: 4.1ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.9ms)
+
+
+Started GET "/services/1" for 127.0.0.1 at 2025-09-12 18:17:33 -0300
+Processing by ServicesController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mService Load (0.4ms)[0m  [1m[34mSELECT "services".* FROM "services" WHERE "services"."id" = 1 LIMIT 1 /*action='show',application='Hotellab3',controller='services'*/[0m
+  ↳ app/controllers/services_controller.rb:7:in 'ServicesController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering services/show.html.erb within layouts/application
+  Rendered services/show.html.erb within layouts/application (Duration: 0.5ms | GC: 0.0ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | GC: 0.0ms)
+Completed 200 OK in 13ms (Views: 4.6ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2025-09-12 18:17:33 -0300
+Processing by ServicesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mService Load (0.3ms)[0m  [1m[34mSELECT "services".* FROM "services" /*action='index',application='Hotellab3',controller='services'*/[0m
+  ↳ app/views/services/index.html.erb:13
+  Rendered services/index.html.erb within layouts/application (Duration: 2.2ms | GC: 0.0ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | GC: 0.0ms)
+Completed 200 OK in 14ms (Views: 6.5ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/reservations" for 127.0.0.1 at 2025-09-12 18:20:51 -0300
+Processing by ReservationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering reservations/index.html.erb within layouts/application
+  [1m[36mReservation Load (0.4ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" /*action='index',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/views/reservations/index.html.erb:18
+  [1m[36mGuest Load (0.3ms)[0m  [1m[34mSELECT "guests".* FROM "guests" WHERE "guests"."id" = 1 LIMIT 1 /*action='index',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/views/reservations/index.html.erb:21
+  [1m[36mRoom Load (0.3ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = 1 LIMIT 1 /*action='index',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/views/reservations/index.html.erb:22
+  [1m[36mCACHE Guest Load (0.0ms)[0m  [1m[34mSELECT "guests".* FROM "guests" WHERE "guests"."id" = 1 LIMIT 1[0m
+  ↳ app/views/reservations/index.html.erb:21
+  [1m[36mCACHE Room Load (0.0ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = 1 LIMIT 1[0m
+  ↳ app/views/reservations/index.html.erb:22
+  Rendered reservations/index.html.erb within layouts/application (Duration: 27.0ms | GC: 1.4ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 29.2ms | GC: 1.4ms)
+Completed 200 OK in 38ms (Views: 22.5ms | ActiveRecord: 7.5ms (5 queries, 2 cached) | GC: 1.4ms)
+
+
+Started GET "/rooms" for 127.0.0.1 at 2025-09-12 18:20:52 -0300
+Processing by RoomsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/index.html.erb within layouts/application
+  [1m[36mRoom Load (1.0ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" /*action='index',application='Hotellab3',controller='rooms'*/[0m
+  ↳ app/views/rooms/index.html.erb:14
+  Rendered rooms/index.html.erb within layouts/application (Duration: 5.5ms | GC: 0.0ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | GC: 0.0ms)
+Completed 200 OK in 16ms (Views: 6.8ms | ActiveRecord: 1.0ms (1 query, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/rooms" for 127.0.0.1 at 2025-09-12 18:20:52 -0300
+Processing by RoomsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/index.html.erb within layouts/application
+  [1m[36mRoom Load (0.5ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" /*action='index',application='Hotellab3',controller='rooms'*/[0m
+  ↳ app/views/rooms/index.html.erb:14
+  Rendered rooms/index.html.erb within layouts/application (Duration: 2.6ms | GC: 0.3ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | GC: 0.3ms)
+Completed 200 OK in 14ms (Views: 5.1ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.3ms)
+
+
+Started GET "/rooms/1" for 127.0.0.1 at 2025-09-12 18:20:53 -0300
+Processing by RoomsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mRoom Load (0.5ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = 1 LIMIT 1 /*action='show',application='Hotellab3',controller='rooms'*/[0m
+  ↳ app/controllers/rooms_controller.rb:7:in 'RoomsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/show.html.erb within layouts/application
+  Rendered rooms/show.html.erb within layouts/application (Duration: 2.7ms | GC: 0.0ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | GC: 0.0ms)
+Completed 200 OK in 36ms (Views: 6.0ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/rooms" for 127.0.0.1 at 2025-09-12 18:20:55 -0300
+Processing by RoomsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/index.html.erb within layouts/application
+  [1m[36mRoom Load (0.4ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" /*action='index',application='Hotellab3',controller='rooms'*/[0m
+  ↳ app/views/rooms/index.html.erb:14
+  Rendered rooms/index.html.erb within layouts/application (Duration: 2.0ms | GC: 0.0ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | GC: 0.0ms)
+Completed 200 OK in 10ms (Views: 3.6ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/rooms" for 127.0.0.1 at 2025-09-12 18:20:59 -0300
+Processing by RoomsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/index.html.erb within layouts/application
+  [1m[36mRoom Load (0.6ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" /*action='index',application='Hotellab3',controller='rooms'*/[0m
+  ↳ app/views/rooms/index.html.erb:14
+  Rendered rooms/index.html.erb within layouts/application (Duration: 2.2ms | GC: 0.0ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | GC: 0.0ms)
+Completed 200 OK in 13ms (Views: 3.1ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/rooms/1" for 127.0.0.1 at 2025-09-12 18:21:00 -0300
+Processing by RoomsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mRoom Load (0.4ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = 1 LIMIT 1 /*action='show',application='Hotellab3',controller='rooms'*/[0m
+  ↳ app/controllers/rooms_controller.rb:7:in 'RoomsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/show.html.erb within layouts/application
+  Rendered rooms/show.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | GC: 0.0ms)
+Completed 200 OK in 13ms (Views: 1.9ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/rooms/1" for 127.0.0.1 at 2025-09-12 18:21:01 -0300
+Processing by RoomsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mRoom Load (0.8ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = 1 LIMIT 1 /*action='show',application='Hotellab3',controller='rooms'*/[0m
+  ↳ app/controllers/rooms_controller.rb:7:in 'RoomsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/show.html.erb within layouts/application
+  Rendered rooms/show.html.erb within layouts/application (Duration: 0.9ms | GC: 0.0ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | GC: 0.0ms)
+Completed 200 OK in 16ms (Views: 4.4ms | ActiveRecord: 0.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/rooms" for 127.0.0.1 at 2025-09-12 18:21:07 -0300
+Processing by RoomsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/index.html.erb within layouts/application
+  [1m[36mRoom Load (0.4ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" /*action='index',application='Hotellab3',controller='rooms'*/[0m
+  ↳ app/views/rooms/index.html.erb:14
+  Rendered rooms/index.html.erb within layouts/application (Duration: 6.6ms | GC: 0.0ms)
+  Rendered shared/_navigation.html.erb (Duration: 1.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 10.5ms | GC: 0.0ms)
+Completed 200 OK in 20ms (Views: 9.4ms | ActiveRecord: 2.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/rooms/1" for 127.0.0.1 at 2025-09-12 18:21:09 -0300
+Processing by RoomsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mRoom Load (0.3ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = 1 LIMIT 1 /*action='show',application='Hotellab3',controller='rooms'*/[0m
+  ↳ app/controllers/rooms_controller.rb:7:in 'RoomsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/show.html.erb within layouts/application
+  Rendered rooms/show.html.erb within layouts/application (Duration: 0.6ms | GC: 0.0ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | GC: 0.0ms)
+Completed 200 OK in 11ms (Views: 2.7ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/rooms" for 127.0.0.1 at 2025-09-12 18:21:25 -0300
+Processing by RoomsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/index.html.erb within layouts/application
+  [1m[36mRoom Load (0.4ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" /*action='index',application='Hotellab3',controller='rooms'*/[0m
+  ↳ app/views/rooms/index.html.erb:14
+  Rendered rooms/index.html.erb within layouts/application (Duration: 1.8ms | GC: 0.0ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | GC: 0.0ms)
+Completed 200 OK in 15ms (Views: 7.5ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 4.6ms)
+
+
+Started GET "/guests" for 127.0.0.1 at 2025-09-12 18:21:25 -0300
+Processing by GuestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering guests/index.html.erb within layouts/application
+  [1m[36mGuest Load (0.4ms)[0m  [1m[34mSELECT "guests".* FROM "guests" /*action='index',application='Hotellab3',controller='guests'*/[0m
+  ↳ app/views/guests/index.html.erb:15
+  Rendered guests/index.html.erb within layouts/application (Duration: 6.9ms | GC: 0.7ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | GC: 0.7ms)
+Completed 200 OK in 16ms (Views: 6.5ms | ActiveRecord: 2.1ms (1 query, 0 cached) | GC: 0.7ms)
+
+
+Started GET "/reservations" for 127.0.0.1 at 2025-09-12 18:21:25 -0300
+Processing by ReservationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering reservations/index.html.erb within layouts/application
+  [1m[36mReservation Load (0.5ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" /*action='index',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/views/reservations/index.html.erb:18
+  [1m[36mGuest Load (0.3ms)[0m  [1m[34mSELECT "guests".* FROM "guests" WHERE "guests"."id" = 1 LIMIT 1 /*action='index',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/views/reservations/index.html.erb:21
+  [1m[36mRoom Load (0.3ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = 1 LIMIT 1 /*action='index',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/views/reservations/index.html.erb:22
+  [1m[36mCACHE Guest Load (0.0ms)[0m  [1m[34mSELECT "guests".* FROM "guests" WHERE "guests"."id" = 1 LIMIT 1[0m
+  ↳ app/views/reservations/index.html.erb:21
+  [1m[36mCACHE Room Load (0.0ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = 1 LIMIT 1[0m
+  ↳ app/views/reservations/index.html.erb:22
+  Rendered reservations/index.html.erb within layouts/application (Duration: 18.4ms | GC: 2.5ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 21.8ms | GC: 2.5ms)
+Completed 200 OK in 31ms (Views: 17.4ms | ActiveRecord: 5.2ms (5 queries, 2 cached) | GC: 2.5ms)
+
+
+Started GET "/guests" for 127.0.0.1 at 2025-09-12 18:21:26 -0300
+Processing by GuestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering guests/index.html.erb within layouts/application
+  [1m[36mGuest Load (0.4ms)[0m  [1m[34mSELECT "guests".* FROM "guests" /*action='index',application='Hotellab3',controller='guests'*/[0m
+  ↳ app/views/guests/index.html.erb:15
+  Rendered guests/index.html.erb within layouts/application (Duration: 1.6ms | GC: 0.0ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | GC: 0.0ms)
+Completed 200 OK in 10ms (Views: 2.6ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/reservations" for 127.0.0.1 at 2025-09-12 18:21:26 -0300
+Processing by ReservationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering reservations/index.html.erb within layouts/application
+  [1m[36mReservation Load (0.8ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" /*action='index',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/views/reservations/index.html.erb:18
+  [1m[36mGuest Load (0.4ms)[0m  [1m[34mSELECT "guests".* FROM "guests" WHERE "guests"."id" = 1 LIMIT 1 /*action='index',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/views/reservations/index.html.erb:21
+  [1m[36mRoom Load (0.3ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = 1 LIMIT 1 /*action='index',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/views/reservations/index.html.erb:22
+  [1m[36mCACHE Guest Load (0.0ms)[0m  [1m[34mSELECT "guests".* FROM "guests" WHERE "guests"."id" = 1 LIMIT 1[0m
+  ↳ app/views/reservations/index.html.erb:21
+  [1m[36mCACHE Room Load (0.0ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = 1 LIMIT 1[0m
+  ↳ app/views/reservations/index.html.erb:22
+  Rendered reservations/index.html.erb within layouts/application (Duration: 11.1ms | GC: 0.5ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 12.7ms | GC: 0.5ms)
+Completed 200 OK in 21ms (Views: 12.0ms | ActiveRecord: 1.5ms (5 queries, 2 cached) | GC: 0.5ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2025-09-12 18:21:31 -0300
+Processing by ServicesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mService Load (0.3ms)[0m  [1m[34mSELECT "services".* FROM "services" /*action='index',application='Hotellab3',controller='services'*/[0m
+  ↳ app/views/services/index.html.erb:13
+  Rendered services/index.html.erb within layouts/application (Duration: 5.8ms | GC: 0.0ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | GC: 0.0ms)
+Completed 200 OK in 17ms (Views: 6.4ms | ActiveRecord: 2.1ms (1 query, 0 cached) | GC: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-09-12 18:36:56 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Hotellab3'*/[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/oscarrusher/.rbenv/versions/3.4.5/lib/ruby/gems/3.4.0/gems/railties-8.0.2.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/oscarrusher/.rbenv/versions/3.4.5/lib/ruby/gems/3.4.0/gems/railties-8.0.2.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.4ms | GC: 0.0ms)
+Completed 200 OK in 33ms (Views: 4.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.8ms)
+
+
+Started GET "/rooms" for 127.0.0.1 at 2025-09-12 18:36:59 -0300
+Processing by RoomsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/index.html.erb within layouts/application
+  [1m[36mRoom Load (9.6ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" /*action='index',application='Hotellab3',controller='rooms'*/[0m
+  ↳ app/views/rooms/index.html.erb:14
+  Rendered rooms/index.html.erb within layouts/application (Duration: 37.2ms | GC: 0.0ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 54.7ms | GC: 0.0ms)
+Completed 200 OK in 98ms (Views: 28.4ms | ActiveRecord: 27.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/rooms/34" for 127.0.0.1 at 2025-09-12 18:37:10 -0300
+Processing by RoomsController#show as HTML
+  Parameters: {"id" => "34"}
+  [1m[36mRoom Load (0.6ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = 34 LIMIT 1 /*action='show',application='Hotellab3',controller='rooms'*/[0m
+  ↳ app/controllers/rooms_controller.rb:7:in 'RoomsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/show.html.erb within layouts/application
+  Rendered rooms/show.html.erb within layouts/application (Duration: 0.8ms | GC: 0.0ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | GC: 0.0ms)
+Completed 200 OK in 17ms (Views: 5.3ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/rooms/1" for 127.0.0.1 at 2025-09-12 18:37:11 -0300
+Processing by RoomsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mRoom Load (0.5ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = 1 LIMIT 1 /*action='show',application='Hotellab3',controller='rooms'*/[0m
+  ↳ app/controllers/rooms_controller.rb:7:in 'RoomsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/show.html.erb within layouts/application
+  Rendered rooms/show.html.erb within layouts/application (Duration: 0.5ms | GC: 0.0ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 3.9ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/rooms/1" for 127.0.0.1 at 2025-09-12 18:37:17 -0300
+Processing by RoomsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mRoom Load (0.5ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = 1 LIMIT 1 /*action='show',application='Hotellab3',controller='rooms'*/[0m
+  ↳ app/controllers/rooms_controller.rb:7:in 'RoomsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/show.html.erb within layouts/application
+  Rendered rooms/show.html.erb within layouts/application (Duration: 0.5ms | GC: 0.0ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 4.0ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/rooms" for 127.0.0.1 at 2025-09-12 18:37:24 -0300
+Processing by RoomsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/index.html.erb within layouts/application
+  [1m[36mRoom Load (0.3ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" /*action='index',application='Hotellab3',controller='rooms'*/[0m
+  ↳ app/views/rooms/index.html.erb:14
+  Rendered rooms/index.html.erb within layouts/application (Duration: 2.0ms | GC: 0.0ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | GC: 0.0ms)
+Completed 200 OK in 14ms (Views: 7.0ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/rooms" for 127.0.0.1 at 2025-09-12 18:37:26 -0300
+Processing by RoomsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/index.html.erb within layouts/application
+  [1m[36mRoom Load (0.3ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" /*action='index',application='Hotellab3',controller='rooms'*/[0m
+  ↳ app/views/rooms/index.html.erb:14
+  Rendered rooms/index.html.erb within layouts/application (Duration: 1.8ms | GC: 0.0ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 5.1ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/guests" for 127.0.0.1 at 2025-09-12 18:39:01 -0300
+Processing by GuestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering guests/index.html.erb within layouts/application
+  [1m[36mGuest Load (1.2ms)[0m  [1m[34mSELECT "guests".* FROM "guests" /*action='index',application='Hotellab3',controller='guests'*/[0m
+  ↳ app/views/guests/index.html.erb:15
+  Rendered guests/index.html.erb within layouts/application (Duration: 11.5ms | GC: 0.0ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 12.7ms | GC: 0.0ms)
+Completed 200 OK in 21ms (Views: 8.6ms | ActiveRecord: 4.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/guests" for 127.0.0.1 at 2025-09-12 18:39:03 -0300
+Processing by GuestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering guests/index.html.erb within layouts/application
+  [1m[36mGuest Load (0.3ms)[0m  [1m[34mSELECT "guests".* FROM "guests" /*action='index',application='Hotellab3',controller='guests'*/[0m
+  ↳ app/views/guests/index.html.erb:15
+  Rendered guests/index.html.erb within layouts/application (Duration: 1.6ms | GC: 0.0ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | GC: 0.0ms)
+Completed 200 OK in 11ms (Views: 4.1ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/reservations" for 127.0.0.1 at 2025-09-12 18:39:04 -0300
+Processing by ReservationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering reservations/index.html.erb within layouts/application
+  [1m[36mReservation Load (1.0ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" /*action='index',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/views/reservations/index.html.erb:18
+  [1m[36mGuest Load (0.3ms)[0m  [1m[34mSELECT "guests".* FROM "guests" WHERE "guests"."id" = 1 LIMIT 1 /*action='index',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/views/reservations/index.html.erb:21
+  [1m[36mRoom Load (0.3ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = 1 LIMIT 1 /*action='index',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/views/reservations/index.html.erb:22
+  [1m[36mCACHE Guest Load (0.0ms)[0m  [1m[34mSELECT "guests".* FROM "guests" WHERE "guests"."id" = 1 LIMIT 1[0m
+  ↳ app/views/reservations/index.html.erb:21
+  [1m[36mCACHE Room Load (0.0ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = 1 LIMIT 1[0m
+  ↳ app/views/reservations/index.html.erb:22
+  Rendered reservations/index.html.erb within layouts/application (Duration: 20.0ms | GC: 0.0ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 22.3ms | GC: 0.0ms)
+Completed 200 OK in 34ms (Views: 19.6ms | ActiveRecord: 3.6ms (5 queries, 2 cached) | GC: 0.0ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2025-09-12 18:39:05 -0300
+Processing by ServicesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mService Load (1.5ms)[0m  [1m[34mSELECT "services".* FROM "services" /*action='index',application='Hotellab3',controller='services'*/[0m
+  ↳ app/views/services/index.html.erb:13
+  Rendered services/index.html.erb within layouts/application (Duration: 9.8ms | GC: 0.0ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 11.4ms | GC: 0.0ms)
+Completed 200 OK in 24ms (Views: 8.8ms | ActiveRecord: 3.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/reservations" for 127.0.0.1 at 2025-09-12 18:39:06 -0300
+Processing by ReservationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering reservations/index.html.erb within layouts/application
+  [1m[36mReservation Load (0.4ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" /*action='index',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/views/reservations/index.html.erb:18
+  [1m[36mGuest Load (0.3ms)[0m  [1m[34mSELECT "guests".* FROM "guests" WHERE "guests"."id" = 1 LIMIT 1 /*action='index',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/views/reservations/index.html.erb:21
+  [1m[36mRoom Load (1.0ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = 1 LIMIT 1 /*action='index',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/views/reservations/index.html.erb:22
+  [1m[36mCACHE Guest Load (0.0ms)[0m  [1m[34mSELECT "guests".* FROM "guests" WHERE "guests"."id" = 1 LIMIT 1[0m
+  ↳ app/views/reservations/index.html.erb:21
+  [1m[36mCACHE Room Load (0.0ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = 1 LIMIT 1[0m
+  ↳ app/views/reservations/index.html.erb:22
+  Rendered reservations/index.html.erb within layouts/application (Duration: 10.1ms | GC: 0.0ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | GC: 0.0ms)
+Completed 200 OK in 18ms (Views: 10.0ms | ActiveRecord: 1.6ms (5 queries, 2 cached) | GC: 0.0ms)
+
+
+Started GET "/guests" for 127.0.0.1 at 2025-09-12 18:39:06 -0300
+Processing by GuestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering guests/index.html.erb within layouts/application
+  [1m[36mGuest Load (0.5ms)[0m  [1m[34mSELECT "guests".* FROM "guests" /*action='index',application='Hotellab3',controller='guests'*/[0m
+  ↳ app/views/guests/index.html.erb:15
+  Rendered guests/index.html.erb within layouts/application (Duration: 2.5ms | GC: 0.0ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | GC: 0.0ms)
+Completed 200 OK in 26ms (Views: 4.1ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/rooms" for 127.0.0.1 at 2025-09-12 18:39:07 -0300
+Processing by RoomsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/index.html.erb within layouts/application
+  [1m[36mRoom Load (0.3ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" /*action='index',application='Hotellab3',controller='rooms'*/[0m
+  ↳ app/views/rooms/index.html.erb:14
+  Rendered rooms/index.html.erb within layouts/application (Duration: 1.9ms | GC: 0.0ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | GC: 0.0ms)
+Completed 200 OK in 16ms (Views: 3.1ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/reservations" for 127.0.0.1 at 2025-09-12 18:39:07 -0300
+Processing by ReservationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering reservations/index.html.erb within layouts/application
+  [1m[36mReservation Load (0.5ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" /*action='index',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/views/reservations/index.html.erb:18
+  [1m[36mGuest Load (0.5ms)[0m  [1m[34mSELECT "guests".* FROM "guests" WHERE "guests"."id" = 1 LIMIT 1 /*action='index',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/views/reservations/index.html.erb:21
+  [1m[36mRoom Load (1.8ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = 1 LIMIT 1 /*action='index',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/views/reservations/index.html.erb:22
+  [1m[36mCACHE Guest Load (0.0ms)[0m  [1m[34mSELECT "guests".* FROM "guests" WHERE "guests"."id" = 1 LIMIT 1[0m
+  ↳ app/views/reservations/index.html.erb:21
+  [1m[36mCACHE Room Load (0.0ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = 1 LIMIT 1[0m
+  ↳ app/views/reservations/index.html.erb:22
+  Rendered reservations/index.html.erb within layouts/application (Duration: 13.0ms | GC: 0.0ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 14.8ms | GC: 0.0ms)
+Completed 200 OK in 22ms (Views: 12.6ms | ActiveRecord: 2.6ms (5 queries, 2 cached) | GC: 0.0ms)
+
+
+Started GET "/guests" for 127.0.0.1 at 2025-09-12 18:39:08 -0300
+Processing by GuestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering guests/index.html.erb within layouts/application
+  [1m[36mGuest Load (1.2ms)[0m  [1m[34mSELECT "guests".* FROM "guests" /*action='index',application='Hotellab3',controller='guests'*/[0m
+  ↳ app/views/guests/index.html.erb:15
+  Rendered guests/index.html.erb within layouts/application (Duration: 5.0ms | GC: 0.0ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | GC: 0.0ms)
+Completed 200 OK in 13ms (Views: 5.9ms | ActiveRecord: 1.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2025-09-12 18:39:08 -0300
+Processing by ServicesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mService Load (0.7ms)[0m  [1m[34mSELECT "services".* FROM "services" /*action='index',application='Hotellab3',controller='services'*/[0m
+  ↳ app/views/services/index.html.erb:13
+  Rendered services/index.html.erb within layouts/application (Duration: 3.7ms | GC: 0.0ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | GC: 0.0ms)
+Completed 200 OK in 15ms (Views: 6.1ms | ActiveRecord: 0.8ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/reservations" for 127.0.0.1 at 2025-09-12 18:39:08 -0300
+Processing by ReservationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering reservations/index.html.erb within layouts/application
+  [1m[36mReservation Load (0.4ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" /*action='index',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/views/reservations/index.html.erb:18
+  [1m[36mGuest Load (0.9ms)[0m  [1m[34mSELECT "guests".* FROM "guests" WHERE "guests"."id" = 1 LIMIT 1 /*action='index',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/views/reservations/index.html.erb:21
+  [1m[36mRoom Load (0.4ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = 1 LIMIT 1 /*action='index',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/views/reservations/index.html.erb:22
+  [1m[36mCACHE Guest Load (0.0ms)[0m  [1m[34mSELECT "guests".* FROM "guests" WHERE "guests"."id" = 1 LIMIT 1[0m
+  ↳ app/views/reservations/index.html.erb:21
+  [1m[36mCACHE Room Load (0.0ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = 1 LIMIT 1[0m
+  ↳ app/views/reservations/index.html.erb:22
+  Rendered reservations/index.html.erb within layouts/application (Duration: 12.1ms | GC: 0.0ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 13.4ms | GC: 0.0ms)
+Completed 200 OK in 20ms (Views: 12.2ms | ActiveRecord: 1.6ms (5 queries, 2 cached) | GC: 0.0ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2025-09-12 18:39:09 -0300
+Processing by ServicesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mService Load (0.4ms)[0m  [1m[34mSELECT "services".* FROM "services" /*action='index',application='Hotellab3',controller='services'*/[0m
+  ↳ app/views/services/index.html.erb:13
+  Rendered services/index.html.erb within layouts/application (Duration: 2.1ms | GC: 0.0ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 5.0ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/services/1" for 127.0.0.1 at 2025-09-12 18:39:10 -0300
+Processing by ServicesController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mService Load (0.6ms)[0m  [1m[34mSELECT "services".* FROM "services" WHERE "services"."id" = 1 LIMIT 1 /*action='show',application='Hotellab3',controller='services'*/[0m
+  ↳ app/controllers/services_controller.rb:7:in 'ServicesController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering services/show.html.erb within layouts/application
+  Rendered services/show.html.erb within layouts/application (Duration: 24.6ms | GC: 23.1ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 26.3ms | GC: 23.1ms)
+Completed 200 OK in 41ms (Views: 27.1ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 23.1ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2025-09-12 18:39:12 -0300
+Processing by ServicesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mService Load (0.5ms)[0m  [1m[34mSELECT "services".* FROM "services" /*action='index',application='Hotellab3',controller='services'*/[0m
+  ↳ app/views/services/index.html.erb:13
+  Rendered services/index.html.erb within layouts/application (Duration: 2.1ms | GC: 0.0ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | GC: 0.0ms)
+Completed 200 OK in 10ms (Views: 3.2ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2025-09-12 18:39:14 -0300
+Processing by ServicesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mService Load (0.5ms)[0m  [1m[34mSELECT "services".* FROM "services" /*action='index',application='Hotellab3',controller='services'*/[0m
+  ↳ app/views/services/index.html.erb:13
+  Rendered services/index.html.erb within layouts/application (Duration: 3.9ms | GC: 0.0ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | GC: 0.0ms)
+Completed 200 OK in 13ms (Views: 6.6ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/services/34" for 127.0.0.1 at 2025-09-12 18:39:15 -0300
+Processing by ServicesController#show as HTML
+  Parameters: {"id" => "34"}
+  [1m[36mService Load (1.4ms)[0m  [1m[34mSELECT "services".* FROM "services" WHERE "services"."id" = 34 LIMIT 1 /*action='show',application='Hotellab3',controller='services'*/[0m
+  ↳ app/controllers/services_controller.rb:7:in 'ServicesController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering services/show.html.erb within layouts/application
+  Rendered services/show.html.erb within layouts/application (Duration: 1.0ms | GC: 0.6ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | GC: 0.6ms)
+Completed 200 OK in 15ms (Views: 2.5ms | ActiveRecord: 1.3ms (1 query, 0 cached) | GC: 0.6ms)
+
+
+Started GET "/services/1" for 127.0.0.1 at 2025-09-12 18:39:15 -0300
+Processing by ServicesController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mService Load (0.3ms)[0m  [1m[34mSELECT "services".* FROM "services" WHERE "services"."id" = 1 LIMIT 1 /*action='show',application='Hotellab3',controller='services'*/[0m
+  ↳ app/controllers/services_controller.rb:7:in 'ServicesController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering services/show.html.erb within layouts/application
+  Rendered services/show.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | GC: 0.0ms)
+Completed 200 OK in 10ms (Views: 2.0ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2025-09-12 18:39:16 -0300
+Processing by ServicesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mService Load (0.4ms)[0m  [1m[34mSELECT "services".* FROM "services" /*action='index',application='Hotellab3',controller='services'*/[0m
+  ↳ app/views/services/index.html.erb:13
+  Rendered services/index.html.erb within layouts/application (Duration: 2.2ms | GC: 0.0ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 5.9ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/reservations" for 127.0.0.1 at 2025-09-12 18:39:17 -0300
+Processing by ReservationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering reservations/index.html.erb within layouts/application
+  [1m[36mReservation Load (2.4ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" /*action='index',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/views/reservations/index.html.erb:18
+  [1m[36mGuest Load (0.4ms)[0m  [1m[34mSELECT "guests".* FROM "guests" WHERE "guests"."id" = 1 LIMIT 1 /*action='index',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/views/reservations/index.html.erb:21
+  [1m[36mRoom Load (0.3ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = 1 LIMIT 1 /*action='index',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/views/reservations/index.html.erb:22
+  [1m[36mCACHE Guest Load (0.0ms)[0m  [1m[34mSELECT "guests".* FROM "guests" WHERE "guests"."id" = 1 LIMIT 1[0m
+  ↳ app/views/reservations/index.html.erb:21
+  [1m[36mCACHE Room Load (0.0ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = 1 LIMIT 1[0m
+  ↳ app/views/reservations/index.html.erb:22
+  Rendered reservations/index.html.erb within layouts/application (Duration: 8.3ms | GC: 1.3ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 10.0ms | GC: 1.3ms)
+Completed 200 OK in 18ms (Views: 7.9ms | ActiveRecord: 3.0ms (5 queries, 2 cached) | GC: 1.3ms)
+
+
+Started GET "/guests" for 127.0.0.1 at 2025-09-12 18:39:18 -0300
+Processing by GuestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering guests/index.html.erb within layouts/application
+  [1m[36mGuest Load (0.3ms)[0m  [1m[34mSELECT "guests".* FROM "guests" /*action='index',application='Hotellab3',controller='guests'*/[0m
+  ↳ app/views/guests/index.html.erb:15
+  Rendered guests/index.html.erb within layouts/application (Duration: 1.6ms | GC: 0.0ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 5.2ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.7ms)
+
+
+Started GET "/rooms" for 127.0.0.1 at 2025-09-12 18:39:18 -0300
+Processing by RoomsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/index.html.erb within layouts/application
+  [1m[36mRoom Load (0.5ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" /*action='index',application='Hotellab3',controller='rooms'*/[0m
+  ↳ app/views/rooms/index.html.erb:14
+  Rendered rooms/index.html.erb within layouts/application (Duration: 2.9ms | GC: 0.0ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | GC: 0.0ms)
+Completed 200 OK in 11ms (Views: 4.3ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/reservations" for 127.0.0.1 at 2025-09-12 18:39:19 -0300
+Processing by ReservationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering reservations/index.html.erb within layouts/application
+  [1m[36mReservation Load (0.7ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" /*action='index',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/views/reservations/index.html.erb:18
+  [1m[36mGuest Load (0.4ms)[0m  [1m[34mSELECT "guests".* FROM "guests" WHERE "guests"."id" = 1 LIMIT 1 /*action='index',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/views/reservations/index.html.erb:21
+  [1m[36mRoom Load (0.5ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = 1 LIMIT 1 /*action='index',application='Hotellab3',controller='reservations'*/[0m
+  ↳ app/views/reservations/index.html.erb:22
+  [1m[36mCACHE Guest Load (0.0ms)[0m  [1m[34mSELECT "guests".* FROM "guests" WHERE "guests"."id" = 1 LIMIT 1[0m
+  ↳ app/views/reservations/index.html.erb:21
+  [1m[36mCACHE Room Load (0.0ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = 1 LIMIT 1[0m
+  ↳ app/views/reservations/index.html.erb:22
+  Rendered reservations/index.html.erb within layouts/application (Duration: 9.0ms | GC: 0.0ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 10.2ms | GC: 0.0ms)
+Completed 200 OK in 18ms (Views: 9.0ms | ActiveRecord: 1.6ms (5 queries, 2 cached) | GC: 0.0ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2025-09-12 18:39:19 -0300
+Processing by ServicesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mService Load (0.3ms)[0m  [1m[34mSELECT "services".* FROM "services" /*action='index',application='Hotellab3',controller='services'*/[0m
+  ↳ app/views/services/index.html.erb:13
+  Rendered services/index.html.erb within layouts/application (Duration: 5.8ms | GC: 1.7ms)
+  Rendered shared/_navigation.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | GC: 1.7ms)
+Completed 200 OK in 15ms (Views: 8.3ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 1.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-09-12 18:39:20 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/oscarrusher/.rbenv/versions/3.4.5/lib/ruby/gems/3.4.0/gems/railties-8.0.2.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/oscarrusher/.rbenv/versions/3.4.5/lib/ruby/gems/3.4.0/gems/railties-8.0.2.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.2ms | GC: 0.0ms)
+Completed 200 OK in 7ms (Views: 0.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-09-12 18:39:20 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/oscarrusher/.rbenv/versions/3.4.5/lib/ruby/gems/3.4.0/gems/railties-8.0.2.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/oscarrusher/.rbenv/versions/3.4.5/lib/ruby/gems/3.4.0/gems/railties-8.0.2.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.2ms | GC: 0.0ms)
+Completed 200 OK in 9ms (Views: 0.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+

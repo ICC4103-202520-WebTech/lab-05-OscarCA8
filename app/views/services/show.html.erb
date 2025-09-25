@@ -1,0 +1,8 @@
+<h1>Service: <%= @service.name %></h1>
+
+<ul class="list-group">
+  <li class="list-group-item"><strong>Price:</strong> <%= number_to_currency(@service.price) %></li>
+  <li class="list-group-item"><strong>Active:</strong> <%= @service.is_active ? "Yes" : "No" %></li>
+</ul>
+
+<%= link_to 'Back to Services', services_path, class: 'btn btn-secondary mt-3' %>
